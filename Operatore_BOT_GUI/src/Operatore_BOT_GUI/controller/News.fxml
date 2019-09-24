@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane hbarPolicy="NEVER" prefHeight="1000.0" prefWidth="1920.0" vbarPolicy="NEVER" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Operatore_BOT_GUI.controller.NewsController">
+   <content>
+      <AnchorPane prefHeight="978.0" prefWidth="1920.0">
+         <children>
+            <ImageView fitHeight="1000.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sfondo.jpg" />
+               </image>
+            </ImageView>
+            <HBox layoutX="-1.0" layoutY="7.0" prefHeight="1000.0" prefWidth="1920.0" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox prefHeight="976.0" prefWidth="1920.0">
+                     <children>
+                        <HBox prefHeight="180.0" prefWidth="1920.0">
+                           <children>
+                              <ImageView fx:id="imgComparaangAzAr" fitHeight="180.0" fitWidth="289.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@sfondo_conmpara.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <VBox prefHeight="180.0" prefWidth="822.0">
+                                 <children>
+                                    <Label fx:id="lblAziendaCompNws" alignment="CENTER" prefHeight="46.0" prefWidth="822.0" text="Azienda">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets top="30.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <ComboBox fx:id="cmbNews" onAction="#doEstraiAziendeNws" prefHeight="26.0" prefWidth="307.0">
+                                       <VBox.margin>
+                                          <Insets left="250.0" top="80.0" />
+                                       </VBox.margin>
+                                    </ComboBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="350.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="712.0" prefWidth="1920.0">
+                           <children>
+                              <VBox prefHeight="603.0" prefWidth="233.0">
+                                 <children>
+                                    <Button fx:id="btninfoAzNws" mnemonicParsing="false" onAction="#doEstraiInfoAzienda" prefHeight="50.0" prefWidth="210.0" text="Informazioni azienda">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnIndBilancioAzNws" mnemonicParsing="false" onAction="#doApriBilancio" prefHeight="50.0" prefWidth="210.0" text="Indicatore Bilancio">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnIndBrevettiAzNws" mnemonicParsing="false" onAction="#doEstraiBrevetti" prefHeight="50.0" prefWidth="210.0" text="Brevetti">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnIndAppaltiAzNws" mnemonicParsing="false" onAction="#doEstraiAppalti" prefHeight="50.0" prefWidth="210.0" text="Appalti">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnIndProgettiAzNws" mnemonicParsing="false" onAction="#doEstraiProgetti" prefHeight="50.0" prefWidth="210.0" text="Progetti">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnIndProdottiAzNws" mnemonicParsing="false" onAction="#doEstraiProdotti" prefHeight="50.0" prefWidth="210.0" text="Prodotti&amp;Servizi">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnArticNws" mnemonicParsing="false" onAction="#doEstraiArticoli" prefHeight="50.0" prefWidth="210.0" text="Articoli">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Button>
+                                    <Button fx:id="btnIndNewsAzNws" mnemonicParsing="false" onAction="#doEstraiNews" prefHeight="50.0" prefWidth="210.0" text="News">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnTornaClassificaNws" mnemonicParsing="false" onAction="#doTornaclassifica" prefHeight="50.0" prefWidth="210.0" text="Classifica">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Button>
+                                    <ComboBox fx:id="cmbAltraAziendaNws" onAction="#doApriaListaAziende" prefWidth="210.0" />
+                                 </children>
+                              </VBox>
+                              <VBox prefHeight="659.0" prefWidth="1339.0">
+                                 <children>
+                                    <GridPane prefHeight="696.0" prefWidth="1189.0" style="-fx-background-color: transparent;">
+                                      <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="432.0" minWidth="10.0" prefWidth="264.3999725341797" />
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1173.5999542236327" minWidth="10.0" prefWidth="842.8000274658203" />
+                                      </columnConstraints>
+                                      <rowConstraints>
+                                        <RowConstraints maxHeight="95.60001220703126" minHeight="0.0" prefHeight="19.599978637695312" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="261.8" minHeight="0.0" prefHeight="24.399993896484375" vgrow="SOMETIMES" />
+                                        <RowConstraints maxHeight="569.2000244140626" minHeight="0.0" prefHeight="546.8000061035157" valignment="TOP" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="1009.3333618164062" minHeight="0.0" prefHeight="32.399975585937455" vgrow="SOMETIMES" />
+                                          <RowConstraints maxHeight="968.7999969482422" minHeight="10.0" prefHeight="26.466699218750023" vgrow="SOMETIMES" />
+                                      </rowConstraints>
+                                       <children>
+                                          <Label fx:id="lblTitNws" prefHeight="18.0" prefWidth="189.0" text="Titolo">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblDataNws" prefHeight="18.0" prefWidth="259.0" text="Data pubblicazione" GridPane.rowIndex="1">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblAbstNws" alignment="TOP_LEFT" contentDisplay="TOP" prefHeight="27.0" prefWidth="133.0" text="Abstract" GridPane.rowIndex="2">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblFonteNws" prefHeight="18.0" prefWidth="115.0" text="Fonte" GridPane.rowIndex="4">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="lblKeywordsNws" prefHeight="18.0" prefWidth="144.0" text="Keywords" GridPane.rowIndex="3">
+                                             <GridPane.margin>
+                                                <Insets left="5.0" />
+                                             </GridPane.margin>
+                                             <font>
+                                                <Font name="System Bold" size="21.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="txtAppNumero" style="-fx-background-color: transparent;" GridPane.columnIndex="1">
+                                             <opaqueInsets>
+                                                <Insets />
+                                             </opaqueInsets>
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font>
+                                          </TextField>
+                                          <TextField fx:id="txtFamilyID" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font></TextField>
+                                          <TextField fx:id="txtTit" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font></TextField>
+                                          <TextArea fx:id="txtAbstractNws" prefHeight="466.0" prefWidth="1046.0" style="-fx-background-color: transparent;" stylesheets="@style.css" wrapText="true" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font></TextArea>
+                                          <TextField fx:id="txtFonteNws" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font></TextField>
+                                          <TextField fx:id="txtKeywordNws" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font></TextField>
+                                          <TextField fx:id="txtDataNws" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font></TextField>
+                                          <TextField fx:id="txtTitoloNws" style="-fx-background-color: transparent;" GridPane.columnIndex="1">
+                                             <font>
+                                                <Font size="17.0" />
+                                             </font></TextField>
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="150.0" />
+                                       </VBox.margin>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>

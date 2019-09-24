@@ -1,0 +1,701 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<ScrollPane hbarPolicy="NEVER" prefHeight="992.0" prefWidth="1920.0" vbarPolicy="ALWAYS" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Operatore_BOT_GUI.controller.IndiciBilancioController">
+   <content>
+      <AnchorPane>
+         <children>
+            <ImageView fitHeight="1000.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@sfondo.jpg" />
+               </image>
+            </ImageView>
+            <HBox layoutX="-1.0" layoutY="7.0" prefHeight="1000.0" prefWidth="1920.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <VBox prefHeight="1000.0" prefWidth="1920.0">
+                     <children>
+                        <HBox prefHeight="180.0" prefWidth="1920.0">
+                           <children>
+                              <ImageView fx:id="imgComparaangAz" fitHeight="180.0" fitWidth="289.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@sfondo_conmpara.png" />
+                                 </image>
+                                 <HBox.margin>
+                                    <Insets left="10.0" />
+                                 </HBox.margin>
+                              </ImageView>
+                              <Label fx:id="lblAziendaCompAz" alignment="CENTER" contentDisplay="CENTER" prefHeight="40.0" prefWidth="822.0" text="Azienda">
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                                 <HBox.margin>
+                                    <Insets left="400.0" top="30.0" />
+                                 </HBox.margin>
+                                 <font>
+                                    <Font name="System Bold" size="24.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox prefHeight="791.0" prefWidth="1920.0">
+                           <children>
+                              <VBox prefHeight="603.0" prefWidth="233.0">
+                                 <children>
+                                    <Button fx:id="btnInfoAzIndBil" mnemonicParsing="false" onAction="#doEstraiInfoAzienda" prefHeight="50.0" prefWidth="210.0" text="Informazioni azienda">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Button>
+                                    <Button fx:id="btnIndBilancAz" mnemonicParsing="false" onAction="#doApriBilancio" prefHeight="50.0" prefWidth="210.0" text="Indicatore Bilancio">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnIndBrevettiAz" mnemonicParsing="false" onAction="#doEstraiBrevetti" prefHeight="50.0" prefWidth="210.0" text="Brevetti">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnIndAppaltiAz" mnemonicParsing="false" onAction="#doEstraiAppalti" prefHeight="50.0" prefWidth="210.0" text="Appalti">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnIndProgettiAz" mnemonicParsing="false" onAction="#doEstraiProgetti" prefHeight="50.0" prefWidth="210.0" text="Progetti">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnIndProdottiAz" mnemonicParsing="false" onAction="#doEstraiProdotti" prefHeight="50.0" prefWidth="210.0" text="Prodotti&amp;Servizi">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnIndArticoliAz" mnemonicParsing="false" onAction="#doEstraiArticoli" prefHeight="50.0" prefWidth="210.0" text="Articoli">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnIndNewsAz" mnemonicParsing="false" onAction="#doEstraiNews" prefHeight="50.0" prefWidth="210.0" text="News">
+                                       <padding>
+                                          <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                       </padding>
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnTornaClassifica" mnemonicParsing="false" onAction="#doTornaClassifica" prefHeight="50.0" prefWidth="210.0" text="Classifica">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font></Button>
+                                    <ComboBox fx:id="cmbAltraAzienda" onAction="#doApriaListaAziende" prefWidth="210.0" />
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets top="40.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <GridPane prefHeight="791.0" prefWidth="1013.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="361.6000244140625" minWidth="10.0" prefWidth="337.6000244140625" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="218.39999999999998" minWidth="10.0" prefWidth="218.39999999999998" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.7999877929688" minWidth="10.0" prefWidth="225.60004882812495" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="228.7999877929688" minWidth="10.0" prefWidth="206.39995117187505" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="38.39999999999998" minHeight="10.0" prefHeight="38.39999999999998" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="39.80002441406248" minHeight="10.0" prefHeight="26.200048828124977" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="38.39999999999998" minHeight="10.0" prefHeight="32.59995117187498" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="38.799999999999955" minHeight="0.0" prefHeight="2.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="13.799963378906227" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label fx:id="lblIdAnno1Az" style="-fx-background-color: transparent;" text="Anno" GridPane.rowIndex="29">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblRicavi1Az" style="-fx-background-color: transparent;" text="Fatturato" GridPane.rowIndex="30">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblMol1Az" style="-fx-background-color: transparent;" text="Margine operativo lordo" GridPane.rowIndex="32">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblValoreAggiunto1Az" style="-fx-background-color: transparent;" text="Valore aggiunto" GridPane.rowIndex="31">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblRO1Az" style="-fx-background-color: transparent;" text="Reddito operativo" GridPane.rowIndex="33">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblRE1Az" style="-fx-background-color: transparent;" text="Risultato esercizio" GridPane.rowIndex="34">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblCCN1Az" style="-fx-background-color: transparent;" text="Capitale circolante netto" GridPane.rowIndex="35">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblKN1Az" style="-fx-background-color: transparent;" text="Patrimonio netto" GridPane.rowIndex="36">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblROI1Az" style="-fx-background-color: transparent;" text="ROI" GridPane.rowIndex="37">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblROE1Az" style="-fx-background-color: transparent;" text="ROE" GridPane.rowIndex="38">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblROS1Az" style="-fx-background-color: transparent;" text="ROS" GridPane.rowIndex="39">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblGIV1Az" style="-fx-background-color: transparent;" text="Grado integrazione verticale" GridPane.rowIndex="40">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblLevFin1Az" style="-fx-background-color: transparent;" text="Leva Finanziaria" GridPane.rowIndex="41">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblLevOper1Az" style="-fx-background-color: transparent;" text="Leva Operativa" GridPane.rowIndex="42">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblLeverage1Az" style="-fx-background-color: transparent;" text="Leverage" GridPane.rowIndex="43">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblMSP1Az" style="-fx-background-color: transparent;" text="Margine di struttura primario" GridPane.rowIndex="44">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblMSS1Az" style="-fx-background-color: transparent;" text="Margine di struttura secondario" GridPane.rowIndex="45">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblCurrentRatio1Az" style="-fx-background-color: transparent;" text="Current ratio" GridPane.rowIndex="46">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblAcidTest1Az" style="-fx-background-color: transparent;" text="Acid test" GridPane.rowIndex="47">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblIndLiqui1Az" style="-fx-background-color: transparent;" text="Indice di liquidità" GridPane.rowIndex="48">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblInvRDAz" prefHeight="18.0" prefWidth="186.0" style="-fx-background-color: transparent;" text="Indice indebitamento a breve" GridPane.rowIndex="49">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblDebVsBanche1Az" style="-fx-background-color: transparent;" text="Debiti verso banche" GridPane.rowIndex="50">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblOnFin1Az" style="-fx-background-color: transparent;" text="Oneri Finanziari" GridPane.rowIndex="51">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblRicAddet1Az" style="-fx-background-color: transparent;" text="Ricavi per addetto" GridPane.rowIndex="52">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblVaAddetto1Az" style="-fx-background-color: transparent;" text="Valore aggiunto per addetto" GridPane.rowIndex="54">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblReAddetto1Az" style="-fx-background-color: transparent;" text="Risultato esercizio per addetto" GridPane.rowIndex="53">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblCostAddetto1Az" style="-fx-background-color: transparent;" text="Costi per addetto" GridPane.rowIndex="55">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblDurMedDeb1Az" style="-fx-background-color: transparent;" text="Durata media crediti" GridPane.rowIndex="56">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <TextField style="-fx-background-color: transparent;" text="2016" GridPane.columnIndex="1" GridPane.rowIndex="29">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtfatturato161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="30">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtVA161Az" onAction="#Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="31">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtMOL161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="32">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtRO161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="33">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtRE161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="34">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtCCN161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="35">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtKN161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="36">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtROI161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="37">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtROE161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="38">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtROS161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="39">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtGIV161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="40">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtLevFin161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="41">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtLevOp161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="42">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtLeverage161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="43">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtMSP161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="44">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtMSS161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="45">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtCurrentRatio161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="46">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtAcidTest161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="47">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtIndLiquidita161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="48">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtIndIndebBrev161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="49">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtDebBanche161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="50">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtOnFin161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="51">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtRicAddetto161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="52">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtRisEsercAddeto161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="53">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtValAggAddeto161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="54">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtCostAddetto161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="55">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtDurataMedCrediti161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="56">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <Label fx:id="lblIdDurMedDebAz" style="-fx-background-color: transparent;" text="Durata media debiti" GridPane.rowIndex="57">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <Label fx:id="lblInvRD1Az" style="-fx-background-color: transparent;" text="Investimenti in R&amp;D" GridPane.rowIndex="58">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font></Label>
+                                    <TextField fx:id="txtDurataMedDebiti161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="57">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtInvestimentiRD161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="58">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField style="-fx-background-color: transparent;" text="2017" GridPane.columnIndex="2" GridPane.rowIndex="29">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font></TextField>
+                                    <TextField style="-fx-background-color: transparent;" text="2018" GridPane.columnIndex="3" GridPane.rowIndex="29">
+                                       <font>
+                                          <Font name="System Bold" size="13.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtfatturato171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="30">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtVA171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="31">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtMOL171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="32">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtRO171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="33">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtRE171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="34">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtCCN171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="35">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtKN171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="36">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtROI171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="37">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtROE171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="38">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtROS171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="39">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtGIV171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="40">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtLevFin171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="41">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtLevOp171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="42">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtLeverage171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="43">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtMSP171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="44">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtMSS171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="45">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtCurrentRatio171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="46">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtAcidTest171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="47">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtIndLiquidita171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="48">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtIndIndebBrev171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="49">
+                                       <GridPane.margin>
+                                          <Insets />
+                                       </GridPane.margin>
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font>
+                                    </TextField>
+                                    <TextField fx:id="txtfatturato181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="30">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtVA181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="31">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtMOL181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="32">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtRO181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="33">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtRE181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="34">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtCCN181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="35">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtKN181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="36">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtROI181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="37">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtROE181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="38">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtROS181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="39">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtGIV181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="40">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtLevFin181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="41">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtDebBanche171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="50">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtOnFin171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="51">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtLevOp181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="42">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtMSP181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="44">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtMSS181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="45">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtRicAddetto171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="52">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtRisEsercAddeto171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="53">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtValAggAddeto171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="54">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtCostAddetto171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="55">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtDurataMedCrediti171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="56">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtDurataMedDebiti171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="57">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtInvestimentiRD171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="58">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtCurrentRatio181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="46">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtAcidTest181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="47">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtIndLiquidita181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="48">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtIndIndebBrev181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="49">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtDebBanche181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="50">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtOnFin181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="51">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtRicAddetto181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="52">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtRisEsercAddeto181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="53">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtValAggAddeto181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="54">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtCostAddetto181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="55">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtDurataMedCrediti181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="56">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtDurataMedDebiti181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="57">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtInvestimentiRD181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="58">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                    <TextField fx:id="txtLeverage181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="43">
+                                       <font>
+                                          <Font size="14.0" />
+                                       </font></TextField>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="350.0" />
+                                 </HBox.margin>
+                              </GridPane>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </content>
+</ScrollPane>
