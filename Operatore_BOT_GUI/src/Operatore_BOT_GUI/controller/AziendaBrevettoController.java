@@ -10,6 +10,7 @@ import Operatore_BOT_GUI.model.Appalto;
 import Operatore_BOT_GUI.model.Azienda;
 import Operatore_BOT_GUI.model.Brevetto;
 import Operatore_BOT_GUI.model.Model;
+import Operatore_BOT_GUI.model.WordCloudGenerator;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -251,6 +252,9 @@ public class AziendaBrevettoController {
     @FXML
     void doListaBrevettAz(ActionEvent event) {
     	this.brevetto = cmbAziendeBrevetto.getValue();
+    	
+    	WordCloudGenerator gen = new WordCloudGenerator (brevetto.getAbstractBrevetto());
+    	gen.generateCloud();
     	
     	txtAppNumero.setText(brevetto.getAppNumber());
     	txtFamilyID.setText(brevetto.getFamilyID());
