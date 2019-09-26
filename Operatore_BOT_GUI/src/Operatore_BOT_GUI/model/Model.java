@@ -59,6 +59,17 @@ public class Model {
 	}
 	
 	
+	public ArrayList<Brevetto> getBrevettiCorrelati (String keyword){
+		
+		ArrayList<Brevetto> brev_correlati = new ArrayList<Brevetto>();
+		for (Brevetto brev : this.getAllPatents()) {
+			if (brev.checkKeyword(keyword)) brev_correlati.add(brev);
+		}
+		
+		return brev_correlati;
+	}
+	
+	
 	
 	private ArrayList<Articolo> getAllArticles (){
 		ArrayList<Articolo> articoli = new ArrayList<Articolo>();
@@ -67,10 +78,22 @@ public class Model {
 		
 		for (Azienda az : aziende) {
 			articoli.addAll(artDAO.getArticoliAzienda(az));
-			System.out.println(az.getNomeAzienda());
 		}
 		
 		return articoli;
+	}
+	
+	
+	private ArrayList<Brevetto> getAllPatents (){
+		ArrayList<Brevetto> brevetti = new ArrayList<Brevetto>();
+		
+		BrevettoDAO brevDAO = new BrevettoDAO();
+		
+		for (Azienda az : aziende) {
+			brevetti.addAll(brevDAO.getBrevettiAzienda(az));
+		}
+		
+		return brevetti;
 	}
 	
 	

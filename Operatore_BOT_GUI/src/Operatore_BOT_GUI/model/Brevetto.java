@@ -11,9 +11,10 @@ public class Brevetto {
 	private String data;
 	private String abstractBrevetto;
 	private String codClass;
+	private String[] keywords;
 	
 	public Brevetto(String partitaIVA, String appNumber, String familyID, String titolo, String assegnatario,
-			String inventori, String data, String abstractBrevetto, String codClass) {
+			String inventori, String data, String abstractBrevetto, String codClass, String keys) {
 		super();
 		this.partitaIVA = partitaIVA;
 		this.appNumber = appNumber;
@@ -24,13 +25,14 @@ public class Brevetto {
 		this.data = data;
 		this.abstractBrevetto = abstractBrevetto;
 		this.codClass = codClass;
+		this.keywords = this.setPrivateKeywords(keys);
 	}
 	
 	
 
 	@Override
 	public String toString() {
-		return "Brevetto" + titolo ;
+		return titolo ;
 	}
 
 
@@ -112,7 +114,27 @@ public class Brevetto {
 	}
 	
 	
+	public String getKeywordsAsString () {
+		String keys = "";
+		for (String s : this.keywords)
+			keys += s + ", ";
+		return keys;
+	}
 	
+	
+	public boolean checkKeyword (String key) {
+		
+		for (String k : this.keywords)
+			if (k.compareTo(key)==0) return true;
+		
+		return false;
+	}
+	
+	
+	private String[] setPrivateKeywords (String s) {
+		String[] keys = s.split(", ");
+		return keys;
+	}
 	
 	
 }

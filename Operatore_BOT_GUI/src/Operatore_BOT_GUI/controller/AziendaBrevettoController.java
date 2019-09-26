@@ -298,9 +298,21 @@ public class AziendaBrevettoController {
     	WordCloudGenerator gen = new WordCloudGenerator (brevetto.getAbstractBrevetto());
     	BufferedImage buff = gen.generateCloud();
     	
-    	this.imgKeyBr.setImage(SwingFXUtils.toFXImage(buff, null));
+    	this.imgKeyBr.setImage(SwingFXUtils.toFXImage(buff, null));    	
     	
-    	List<WordFrequency> frequencies = gen.getFrequencies();
+    	txtAppNumero.setText(brevetto.getAppNumber());
+    	txtFamilyID.setText(brevetto.getFamilyID());
+    	txtTit.setText(brevetto.getTitolo());
+    	txtAssegnee.setText(brevetto.getAssegnatario());
+    	txtInve.setText(brevetto.getInventori());
+    	txtDate.setText(brevetto.getData());
+    	txtDescription.setText(brevetto.getAbstractBrevetto());
+    	txtCodiceClass.setText(brevetto.getCodClass());
+    	
+
+    	List<WordFrequency> frequencies = gen.getFrequencies();    	
+    	if (frequencies.size() == 0) return;
+    	
     	Collections.sort(frequencies);
     	
     	hypKey1.setText(frequencies.get(0).getWord());
@@ -313,16 +325,6 @@ public class AziendaBrevettoController {
     	hypKey8.setText(frequencies.get(7).getWord());
     	hypKey9.setText(frequencies.get(8).getWord());
     	hypKey10.setText(frequencies.get(9).getWord());
-    	
-    	
-    	txtAppNumero.setText(brevetto.getAppNumber());
-    	txtFamilyID.setText(brevetto.getFamilyID());
-    	txtTit.setText(brevetto.getTitolo());
-    	txtAssegnee.setText(brevetto.getAssegnatario());
-    	txtInve.setText(brevetto.getInventori());
-    	txtDate.setText(brevetto.getData());
-    	txtDescription.setText(brevetto.getAbstractBrevetto());
-    	txtCodiceClass.setText(brevetto.getCodClass());
     }
 
     @FXML
@@ -340,7 +342,26 @@ public class AziendaBrevettoController {
 
     @FXML
     void doOpenLink(ActionEvent event) {
-
+    	Hyperlink hyperword = (Hyperlink) event.getSource();
+    	String word = hyperword.getText();
+    	
+    	//model.setAziendaSelezionata(model.getAzienda());
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("KeywordCorrelation.fxml"));
+		ScrollPane root = null;
+		try {
+			root = (ScrollPane)loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		KeywordCorrelationController controller = loader.getController();
+		controller.setModel(model);
+		controller.setKeyword(word);
+    	
+		Scene goToHome = new Scene(root);
+    	Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+    	newStage.setScene(goToHome);
+    	newStage.show();
     }
     
     @FXML // This method is called by the FXMLLoader when initialization is complete

@@ -88,7 +88,7 @@ public class Articolo {
 	}
 	
 	private String[] setPrivateKeywords (String s) {
-		String[] keys = s.trim().split(",");
+		String[] keys = s.split(", ");
 		return keys;
 	}
 	

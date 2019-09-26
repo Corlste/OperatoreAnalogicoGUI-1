@@ -4,6 +4,7 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
 <?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -22,7 +23,7 @@
 				</ImageView>
 				<HBox layoutX="-1.0" layoutY="7.0" prefHeight="994.0" prefWidth="1920.0" AnchorPane.topAnchor="0.0">
 					<children>
-						<VBox prefHeight="889.0" prefWidth="1920.0">
+						<VBox prefHeight="1000.0" prefWidth="1920.0">
 							<children>
 								<HBox prefHeight="180.0" prefWidth="1920.0">
 									<children>
@@ -34,7 +35,7 @@
 												<Insets left="10.0" />
 											</HBox.margin>
 										</ImageView>
-										<Label fx:id="lblKeyword" alignment="CENTER" prefWidth="822.0" text="Keyword">
+										<Label fx:id="lblKeyword" alignment="CENTER" prefHeight="78.0" prefWidth="521.0" text="Keyword">
 											<padding>
 												<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
 											</padding>
@@ -42,12 +43,12 @@
 												<Insets left="400.0" top="50.0" />
 											</HBox.margin>
 											<font>
-												<Font name="System Bold" size="24.0" />
+												<Font name="System Bold" size="40.0" />
 											</font>
 										</Label>
 									</children>
 								</HBox>
-								<HBox prefHeight="646.0" prefWidth="1920.0">
+								<HBox prefHeight="762.0" prefWidth="1920.0">
 									<VBox.margin>
 										<Insets top="50.0" />
 									</VBox.margin>
@@ -59,8 +60,58 @@
 														<Font name="System Bold" size="30.0" />
 													</font>
 												</Label>
-												<ListView fx:id="list_articoli" prefHeight="200.0" prefWidth="943.0" />
+												<ListView fx:id="list_articoli" onMouseClicked="#showArticleInfo" prefHeight="200.0" prefWidth="943.0" />
+                                    <HBox prefHeight="45.0" prefWidth="960.0" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="960.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Titolo:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="titolo_art" text="titolo" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="960.0" spacing="10.0" style="-fx-background-color: transparent;">
+                                       <children>
+                                          <Label text="Azienda:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="azienda_art" text="titolo" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="960.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Testo:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="319.0" prefWidth="920.0">
+                                       <children>
+                                          <TextArea fx:id="text_art" editable="false" prefHeight="319.0" prefWidth="926.0" style="-fx-background-color: transparent;" stylesheets="@style.css">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
 											</children>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
 										</VBox>
 										<VBox alignment="TOP_CENTER" prefHeight="646.0" prefWidth="960.0">
 											<children>
@@ -69,8 +120,58 @@
 														<Font name="System Bold" size="30.0" />
 													</font>
 												</Label>
-												<ListView fx:id="list_brevetti" prefHeight="200.0" prefWidth="200.0" />
+												<ListView fx:id="list_brevetti" onMouseClicked="#showPatentInfo" prefHeight="200.0" prefWidth="200.0" />
+                                    <HBox prefHeight="45.0" prefWidth="960.0" />
+                                    <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="960.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Titolo:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="titolo_brev" text="titolo" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="960.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Azienda:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="azienda_brev" text="titolo" textAlignment="CENTER">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="45.0" prefWidth="960.0" spacing="10.0">
+                                       <children>
+                                          <Label text="Abstract:">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="319.0" prefWidth="920.0">
+                                       <children>
+                                          <TextArea fx:id="text_brev" editable="false" prefHeight="319.0" prefWidth="926.0" style="-fx-background-color: transparent;" stylesheets="@style.css">
+                                             <font>
+                                                <Font size="16.0" />
+                                             </font>
+                                          </TextArea>
+                                       </children>
+                                    </HBox>
 											</children>
+                                 <padding>
+                                    <Insets left="20.0" right="20.0" />
+                                 </padding>
 										</VBox>
 									</children>
 								</HBox>
