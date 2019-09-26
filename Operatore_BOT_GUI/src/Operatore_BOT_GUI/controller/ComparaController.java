@@ -11,7 +11,7 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
-
+import javafx.scene.control.Hyperlink;
 import Operatore_BOT_GUI.model.Appalto;
 import Operatore_BOT_GUI.model.Articolo;
 import Operatore_BOT_GUI.model.Azienda;
@@ -953,11 +953,71 @@ public class ComparaController {
     @FXML // fx:id="txtNumBack"
     private TextField txtNumBack; // Value injected by FXMLLoader
 
+    @FXML // fx:id="hypKeyC1"
+    private Hyperlink hypKeyC1; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyC2"
+    private Hyperlink hypKeyC2; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyC3"
+    private Hyperlink hypKeyC3; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyC4"
+    private Hyperlink hypKeyC4; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyC5"
+    private Hyperlink hypKeyC5; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyC6"
+    private Hyperlink hypKeyC6; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyC7"
+    private Hyperlink hypKeyC7; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyC8"
+    private Hyperlink hypKeyC8; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyC9"
+    private Hyperlink hypKeyC9; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyC10"
+    private Hyperlink hypKeyC10; // Value injected by FXMLLoader
+
     @FXML // fx:id="lblNumBack1"
     private Label lblNumBack1; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtNumBack1"
     private TextField txtNumBack1; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCc1"
+    private Hyperlink hypKeyCc1; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCc2"
+    private Hyperlink hypKeyCc2; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCc3"
+    private Hyperlink hypKeyCc3; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCc4"
+    private Hyperlink hypKeyCc4; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCc5"
+    private Hyperlink hypKeyCc5; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCc6"
+    private Hyperlink hypKeyCc6; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCc7"
+    private Hyperlink hypKeyCc7; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCc8"
+    private Hyperlink hypKeyCc8; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCc9"
+    private Hyperlink hypKeyCc9; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCc10"
+    private Hyperlink hypKeyCc10; // Value injected by FXMLLoader
 
     @FXML // fx:id="lblNumArtRil1"
     private Label lblNumArtRil1; // Value injected by FXMLLoader
@@ -965,12 +1025,71 @@ public class ComparaController {
     @FXML // fx:id="txtNumArtRil1"
     private TextField txtNumArtRil1; // Value injected by FXMLLoader
 
+    @FXML // fx:id="hypKeyCa1"
+    private Hyperlink hypKeyCa1; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCa2"
+    private Hyperlink hypKeyCa2; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCa3"
+    private Hyperlink hypKeyCa3; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCa4"
+    private Hyperlink hypKeyCa4; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCa5"
+    private Hyperlink hypKeyCa5; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCa6"
+    private Hyperlink hypKeyCa6; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCa7"
+    private Hyperlink hypKeyCa7; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCa8"
+    private Hyperlink hypKeyCa8; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCa9"
+    private Hyperlink hypKeyCa9; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCa10"
+    private Hyperlink hypKeyCa10; // Value injected by FXMLLoader
+
     @FXML // fx:id="lblNumArtRil"
     private Label lblNumArtRil; // Value injected by FXMLLoader
 
     @FXML // fx:id="txtNumArtRil"
     private TextField txtNumArtRil; // Value injected by FXMLLoader
 
+    @FXML // fx:id="hypKeyCac1"
+    private Hyperlink hypKeyCac1; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCac2"
+    private Hyperlink hypKeyCac2; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCac3"
+    private Hyperlink hypKeyCac3; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCac4"
+    private Hyperlink hypKeyCac4; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCac5"
+    private Hyperlink hypKeyCac5; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCac6"
+    private Hyperlink hypKeyCac6; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCac7"
+    private Hyperlink hypKeyCac7; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCac8"
+    private Hyperlink hypKeyCac8; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCac9"
+    private Hyperlink hypKeyCac9; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKeyCac10"
+    private Hyperlink hypKeyCac10; // Value injected by FXMLLoader
     Model model;
     
     /*
@@ -1539,6 +1658,27 @@ public class ComparaController {
     	newStage.setScene(goToHome);
     	newStage.show();
     }
+    
+    @FXML
+    void doOpenLinkArC(ActionEvent event) {
+
+    }
+
+    @FXML
+    void doOpenLinkArt(ActionEvent event) {
+
+    }
+
+    @FXML
+    void doOpenLinkBr(ActionEvent event) {
+
+    }
+
+    @FXML
+    void doOpenLinkBrC(ActionEvent event) {
+
+    }
+
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {

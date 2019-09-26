@@ -2,6 +2,7 @@ package Operatore_BOT_GUI.model;
 
 import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -29,8 +30,9 @@ public class WordCloudGenerator {
 		this.populateStopwords();
 	}
 	
-	public void generateCloud () {
-
+	
+	public List<WordFrequency> getFrequencies (){
+		
 		ArrayList<String> good_words = new ArrayList<String>();
 		
 		String cleantext = text.replace(".", " ").replace(",", " ").replace(";", " ").replace("(", " ").replace(")", " ").replace("\"", " ").replace("-", " ").replace(":", " ").replace("?", " ").replace("!", " ").replace("'", " ");
@@ -44,6 +46,16 @@ public class WordCloudGenerator {
 		final FrequencyAnalyzer frequencyAnalyzer = new FrequencyAnalyzer();
 		List<WordFrequency> wordFrequencies = null;
 		wordFrequencies = frequencyAnalyzer.load(good_words);
+		
+		return wordFrequencies;
+	}
+	
+	
+	public BufferedImage generateCloud () {
+
+		List<WordFrequency> wordFrequencies = null;
+		wordFrequencies = this.getFrequencies();
+		
 		//WordFrequency wf = new WordFrequency("", 2);
 		final Dimension dimension = new Dimension(400, 400);
 		final WordCloud wordCloud = new WordCloud(dimension, CollisionMode.PIXEL_PERFECT);
@@ -54,6 +66,7 @@ public class WordCloudGenerator {
 		wordCloud.setFontScalar(new LinearFontScalar(8, 40));
 		wordCloud.build(wordFrequencies);
 		wordCloud.writeToFile("C:\\Users\\fabio\\Desktop\\datarank_wordcloud_circle_sqrt_font.png");
+		return wordCloud.getBufferedImage();
 	}
 	
 	

@@ -10,7 +10,7 @@ import java.net.URL;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.StringTokenizer;
-
+import javafx.scene.control.ComboBox;
 import Operatore_BOT_GUI.model.Azienda;
 import Operatore_BOT_GUI.model.Model;
 import javafx.event.ActionEvent;
@@ -52,6 +52,21 @@ public class homeController {
 
     @FXML // fx:id="btnBilancio"
     private Button btnBilancio; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="cmbPesiBil"
+    private ComboBox<?> cmbPesiBil; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbPesiApp"
+    private ComboBox<?> cmbPesiApp; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbPesiPrg"
+    private ComboBox<?> cmbPesiPrg; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbPesiBrv"
+    private ComboBox<?> cmbPesiBrv; // Value injected by FXMLLoader
+
+    @FXML // fx:id="cmbPesiArt"
+    private ComboBox<?> cmbPesiArt; // Value injected by FXMLLoader
 
     @FXML // fx:id="btnArticoli"
     private Button btnArticoli; // Value injected by FXMLLoader
@@ -363,6 +378,11 @@ public class homeController {
     	Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
     	newStage.setScene(goToHome);
     	newStage.show();
+
+    }
+
+    @FXML
+    void doApriPercen(ActionEvent event) {
 
     }
 

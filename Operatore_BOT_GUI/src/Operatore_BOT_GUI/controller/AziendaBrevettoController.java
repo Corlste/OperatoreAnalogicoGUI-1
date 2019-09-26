@@ -1,16 +1,22 @@
 package Operatore_BOT_GUI.controller;
 
 
+import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.net.URL;
+import java.util.Collections;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import com.kennycason.kumo.WordFrequency;
+
+import javafx.scene.control.Hyperlink;
 import Operatore_BOT_GUI.model.Appalto;
 import Operatore_BOT_GUI.model.Azienda;
 import Operatore_BOT_GUI.model.Brevetto;
 import Operatore_BOT_GUI.model.Model;
 import Operatore_BOT_GUI.model.WordCloudGenerator;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -46,6 +52,42 @@ public class AziendaBrevettoController {
 
     @FXML // fx:id="btnInfoAzBre"
     private Button btnInfoAzBre; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="imgKeyBr"
+    private ImageView imgKeyBr; // Value injected by FXMLLoader
+    
+    @FXML // fx:id="lbl10keyw"
+    private Label lbl10keyw; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKey1"
+    private Hyperlink hypKey1; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKey2"
+    private Hyperlink hypKey2; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKey3"
+    private Hyperlink hypKey3; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKey4"
+    private Hyperlink hypKey4; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKey5"
+    private Hyperlink hypKey5; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKey6"
+    private Hyperlink hypKey6; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKey7"
+    private Hyperlink hypKey7; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKey8"
+    private Hyperlink hypKey8; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKey9"
+    private Hyperlink hypKey9; // Value injected by FXMLLoader
+
+    @FXML // fx:id="hypKey10"
+    private Hyperlink hypKey10; // Value injected by FXMLLoader
 
     @FXML // fx:id="btnIndBilancioAzBr"
     private Button btnIndBilancioAzBr; // Value injected by FXMLLoader
@@ -254,7 +296,24 @@ public class AziendaBrevettoController {
     	this.brevetto = cmbAziendeBrevetto.getValue();
     	
     	WordCloudGenerator gen = new WordCloudGenerator (brevetto.getAbstractBrevetto());
-    	gen.generateCloud();
+    	BufferedImage buff = gen.generateCloud();
+    	
+    	this.imgKeyBr.setImage(SwingFXUtils.toFXImage(buff, null));
+    	
+    	List<WordFrequency> frequencies = gen.getFrequencies();
+    	Collections.sort(frequencies);
+    	
+    	hypKey1.setText(frequencies.get(0).getWord());
+    	hypKey2.setText(frequencies.get(1).getWord());
+    	hypKey3.setText(frequencies.get(2).getWord());
+    	hypKey4.setText(frequencies.get(3).getWord());
+    	hypKey5.setText(frequencies.get(4).getWord());
+    	hypKey6.setText(frequencies.get(5).getWord());
+    	hypKey7.setText(frequencies.get(6).getWord());
+    	hypKey8.setText(frequencies.get(7).getWord());
+    	hypKey9.setText(frequencies.get(8).getWord());
+    	hypKey10.setText(frequencies.get(9).getWord());
+    	
     	
     	txtAppNumero.setText(brevetto.getAppNumber());
     	txtFamilyID.setText(brevetto.getFamilyID());
@@ -279,6 +338,11 @@ public class AziendaBrevettoController {
     	newStage.show();
     }
 
+    @FXML
+    void doOpenLink(ActionEvent event) {
+
+    }
+    
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {
         assert imgComparaangAz != null : "fx:id=\"imgComparaangAz\" was not injected: check your FXML file 'Azienda_Brevetto.fxml'.";

@@ -48,6 +48,32 @@ public class Model {
 	}
 	
 	
+	public ArrayList<Articolo> getArticoliCorrelati (String keyword){
+		
+		ArrayList<Articolo> art_correlati = new ArrayList<Articolo>();
+		for (Articolo art : this.getAllArticles()) {
+			if (art.checkKeyword(keyword)) art_correlati.add(art);
+		}
+		
+		return art_correlati;
+	}
+	
+	
+	
+	private ArrayList<Articolo> getAllArticles (){
+		ArrayList<Articolo> articoli = new ArrayList<Articolo>();
+		
+		ArticoloDAO artDAO = new ArticoloDAO();
+		
+		for (Azienda az : aziende) {
+			articoli.addAll(artDAO.getArticoliAzienda(az));
+			System.out.println(az.getNomeAzienda());
+		}
+		
+		return articoli;
+	}
+	
+	
 	
 	public List<Azienda> getAziendeCompetitorHome() {
 		return aziendeCompetitorHome;
@@ -80,7 +106,9 @@ public class Model {
 	}
 	
 	public List<Azienda> getAziendeMenoSelezionata(Azienda azienda){
-		aziende.remove(azienda);
+//		List<Azienda> azs = this.aziende;
+//		azs.remove(azienda);
+//		return azs;
 		return aziende;
 	}
 

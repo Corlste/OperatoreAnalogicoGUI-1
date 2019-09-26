@@ -1,14 +1,21 @@
 package Operatore_BOT_GUI.controller;
 
-	import java.io.IOException;
+	import java.awt.image.BufferedImage;
+import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.ResourceBundle;
 
+import com.kennycason.kumo.WordFrequency;
+
+import javafx.scene.control.Hyperlink;
 import Operatore_BOT_GUI.model.Articolo;
 import Operatore_BOT_GUI.model.Azienda;
 import Operatore_BOT_GUI.model.Model;
 import Operatore_BOT_GUI.model.WordCloudGenerator;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 	import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -111,6 +118,39 @@ import javafx.stage.Stage;
 
 		    @FXML // fx:id="txtLinkArt"
 		    private TextField txtLinkArt; // Value injected by FXMLLoader
+		    
+		    @FXML // fx:id="imgKeyAr"
+		    private ImageView imgKeyAr; // Value injected by FXMLLoader
+
+		    @FXML // fx:id="hypKeyAr1"
+		    private Hyperlink hypKeyAr1; // Value injected by FXMLLoader
+
+		    @FXML // fx:id="hypKeyAr2"
+		    private Hyperlink hypKeyAr2; // Value injected by FXMLLoader
+
+		    @FXML // fx:id="hypKeyAr3"
+		    private Hyperlink hypKeyAr3; // Value injected by FXMLLoader
+
+		    @FXML // fx:id="hypKeyAr4"
+		    private Hyperlink hypKeyAr4; // Value injected by FXMLLoader
+
+		    @FXML // fx:id="hypKeyAr5"
+		    private Hyperlink hypKeyAr5; // Value injected by FXMLLoader
+
+		    @FXML // fx:id="hypKeyAr6"
+		    private Hyperlink hypKeyAr6; // Value injected by FXMLLoader
+
+		    @FXML // fx:id="hypKeyAr7"
+		    private Hyperlink hypKeyAr7; // Value injected by FXMLLoader
+
+		    @FXML // fx:id="hypKeyAr8"
+		    private Hyperlink hypKeyAr8; // Value injected by FXMLLoader
+
+		    @FXML // fx:id="hypKeyAr9"
+		    private Hyperlink hypKeyAr9; // Value injected by FXMLLoader
+
+		    @FXML // fx:id="hypKeyAr10"
+		    private Hyperlink hypKeyAr10; // Value injected by FXMLLoader
 
 		    Model model;
 		    private Articolo articolo = new Articolo();
@@ -187,12 +227,28 @@ import javafx.stage.Stage;
 		    	this.articolo = cmbArticoli.getValue();
 
 		    	WordCloudGenerator gen = new WordCloudGenerator (articolo.getText());
-		    	gen.generateCloud();
+		    	BufferedImage buff = gen.generateCloud();
+		    	
+		    	this.imgKeyAr.setImage(SwingFXUtils.toFXImage(buff, null));
+		    	
+		    	List<WordFrequency> frequencies = gen.getFrequencies();
+		    	Collections.sort(frequencies);
+		    	
+		    	hypKeyAr1.setText(frequencies.get(0).getWord());
+		    	hypKeyAr2.setText(frequencies.get(1).getWord());
+		    	hypKeyAr3.setText(frequencies.get(2).getWord());
+		    	hypKeyAr4.setText(frequencies.get(3).getWord());
+		    	hypKeyAr5.setText(frequencies.get(4).getWord());
+		    	hypKeyAr6.setText(frequencies.get(5).getWord());
+		    	hypKeyAr7.setText(frequencies.get(6).getWord());
+		    	hypKeyAr8.setText(frequencies.get(7).getWord());
+		    	hypKeyAr9.setText(frequencies.get(8).getWord());
+		    	hypKeyAr10.setText(frequencies.get(9).getWord());
 		    	
 		    	txtLinkArt.setText(articolo.getLink());
 		    	txtBackArti.setText(articolo.getBacklink());
 		    	txtTestoArt.setText(articolo.getText());
-		    	txtKeywordArt.setText(articolo.getKeywords());
+		    	txtKeywordArt.setText(articolo.getKeywordsAsString());
 		    	txtDataArt.setText(articolo.getDate());
 
 		    }
@@ -275,6 +331,31 @@ import javafx.stage.Stage;
 		    	newStage.show();
 		    }
 
+		    @FXML
+		    void doOpenLInkAr(ActionEvent event) {
+		    	Hyperlink hyperword = (Hyperlink) event.getSource();
+		    	String word = hyperword.getText();
+		    	
+		    	//model.setAziendaSelezionata(model.getAzienda());
+		    	FXMLLoader loader = new FXMLLoader(getClass().getResource("KeywordCorrelation.fxml"));
+				ScrollPane root = null;
+				try {
+					root = (ScrollPane)loader.load();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				KeywordCorrelationController controller = loader.getController();
+				controller.setModel(model);
+				controller.setKeyword(word);
+		    	
+				Scene goToHome = new Scene(root);
+		    	Stage newStage = (Stage)((Node)event.getSource()).getScene().getWindow();
+		    	newStage.setScene(goToHome);
+		    	newStage.show();
+		    	
+		    }
+		    
 		    @FXML // This method is called by the FXMLLoader when initialization is complete
 		    void initialize() {
 		        assert imgComparaangAzAr != null : "fx:id=\"imgComparaangAzAr\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
@@ -303,6 +384,17 @@ import javafx.stage.Stage;
 		        assert txtKeywordArt != null : "fx:id=\"txtKeywordArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
 		        assert txtBackArti != null : "fx:id=\"txtBackArti\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
 		        assert txtLinkArt != null : "fx:id=\"txtLinkArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
-
+		        assert hypKeyAr1 != null : "fx:id=\"txtLinkArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
+		        assert hypKeyAr2 != null : "fx:id=\"txtLinkArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
+		        assert hypKeyAr3 != null : "fx:id=\"txtLinkArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
+		        assert hypKeyAr4 != null : "fx:id=\"txtLinkArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
+		        assert hypKeyAr5 != null : "fx:id=\"txtLinkArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
+		        assert hypKeyAr6 != null : "fx:id=\"txtLinkArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
+		        assert hypKeyAr7 != null : "fx:id=\"txtLinkArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
+		        assert hypKeyAr8 != null : "fx:id=\"txtLinkArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
+		        assert hypKeyAr9 != null : "fx:id=\"txtLinkArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
+		        assert hypKeyAr10 != null : "fx:id=\"txtLinkArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
+		        assert imgKeyAr != null : "fx:id=\"txtLinkArt\" was not injected: check your FXML file 'Articoli_Azienda.fxml'.";
+		        
 		    }
 		}

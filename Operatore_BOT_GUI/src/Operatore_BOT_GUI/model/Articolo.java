@@ -7,7 +7,7 @@ public class Articolo {
 	private String Link;
 	private String backlink;
 	private String text;
-	private String keywords;
+	private String[] keywords;
 	private String date;
 	
 	public Articolo(String partitaIVA, String title, String link, String backlink, String text, String keywords,
@@ -18,20 +18,11 @@ public class Articolo {
 		Link = link;
 		this.backlink = backlink;
 		this.text = text;
-		this.keywords = keywords;
+		this.keywords = this.setPrivateKeywords(keywords);
 		this.date = date;
 	}
 
 	
-	
-	@Override
-	public String toString() {
-		return "Articolo " + title;
-	}
-
-	
-
-
 	public Articolo() {
 		super();
 	}
@@ -84,12 +75,8 @@ public class Articolo {
 		this.text = text;
 	}
 
-	public String getKeywords() {
+	public String[] getKeywords() {
 		return keywords;
-	}
-
-	public void setKeywords(String keywords) {
-		this.keywords = keywords;
 	}
 
 	public String getDate() {
@@ -100,6 +87,31 @@ public class Articolo {
 		this.date = date;
 	}
 	
+	private String[] setPrivateKeywords (String s) {
+		String[] keys = s.trim().split(",");
+		return keys;
+	}
+	
+	public String getKeywordsAsString () {
+		String keys = "";
+		for (String s : this.keywords)
+			keys += s + ", ";
+		return keys;
+	}
+	
+	
+	public boolean checkKeyword (String key) {
+		
+		for (String k : this.keywords)
+			if (k.compareTo(key)==0) return true;
+		
+		return false;
+	}
+	
+	@Override
+	public String toString() {
+		return this.title;
+	}
 	
 	
 

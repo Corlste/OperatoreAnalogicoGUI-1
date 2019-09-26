@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
@@ -10,7 +11,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="1000.0" prefWidth="1920.0" style="-fx-background-color: ebe5e5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Operatore_BOT_GUI.controller.homeController">
+<AnchorPane prefHeight="921.0" prefWidth="1920.0" style="-fx-background-color: ebe5e5;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Operatore_BOT_GUI.controller.homeController">
    <children>
       <ImageView fitHeight="1000.0" fitWidth="1920.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -28,145 +29,237 @@
                   </ImageView>
                </children>
             </HBox>
-            <HBox prefHeight="778.0" prefWidth="1920.0">
+            <HBox prefHeight="700.0" prefWidth="1920.0">
                <children>
-                  <VBox prefHeight="595.0" prefWidth="644.0">
-                     <children>
-                        <AnchorPane prefHeight="449.0" prefWidth="491.0">
-                           <children>
-                              <ImageView fitHeight="541.0" fitWidth="588.0" layoutX="-29.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@Azienda_Compara.png" />
-                                 </image>
-                              </ImageView>
-                              <Label fx:id="lblAzienda" alignment="CENTER" layoutX="132.0" layoutY="195.0" opacity="0.0" prefHeight="71.0" prefWidth="186.0" text="Azienda">
-                                 <font>
-                                    <Font size="36.0" />
-                                 </font>
-                              </Label>
-                              <Button fx:id="btnProdotti" layoutX="383.0" layoutY="137.0" mnemonicParsing="false" onAction="#doProdotti" rotate="66.8" style="-fx-background-color: #139b48;" text="Prodotti">
-                                 <font>
-                                    <Font name="System Bold" size="23.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="btnNews" layoutX="79.0" layoutY="394.0" mnemonicParsing="false" onAction="#doNews" rotate="-140.9" style="-fx-background-color: f8991e;" text="News">
-                                 <font>
-                                    <Font name="System Bold" size="23.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="btnProgetti" layoutX="-9.0" layoutY="241.0" mnemonicParsing="false" onAction="#doProgetti" prefHeight="50.0" prefWidth="121.0" rotate="-92.3" style="-fx-background-color: #4554a5;" text="Progetti">
-                                 <font>
-                                    <Font name="System Bold" size="23.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="btnBrevetti" layoutX="260.0" layoutY="433.0" mnemonicParsing="false" onAction="#doBrevetti" rotate="164.2" style="-fx-background-color: #939598;" text="Brevetti">
-                                 <font>
-                                    <Font name="System Bold" size="23.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="btnAppalti" layoutX="71.0" layoutY="74.0" mnemonicParsing="false" onAction="#doAppalti" rotate="-40.2" style="-fx-background-color: #f8d731;" text="Appalti">
-                                 <font>
-                                    <Font name="System Bold" size="23.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="btnBilancio" layoutX="247.0" layoutY="41.0" mnemonicParsing="false" onAction="#doBilancio" rotate="16.2" style="-fx-background-color: cd2027;" text="Bilancio">
-                                 <font>
-                                    <Font name="System Bold" size="23.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="btnArticoli" layoutX="389.0" layoutY="321.0" mnemonicParsing="false" onAction="#doArticoli" rotate="111.9" style="-fx-background-color: #a953a0;" text="Articoli">
-                                 <font>
-                                    <Font name="System Bold" size="23.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="btnAziendaHome" layoutX="114.0" layoutY="230.0" mnemonicParsing="false" onAction="#doVaiInfoAzienda" prefHeight="71.0" prefWidth="289.0" style="-fx-background-color: transparent;" text="Azienda">
-                                 <font>
-                                    <Font name="System Bold" size="23.0" />
-                                 </font>
-                              </Button>
-                           </children>
-                           <VBox.margin>
-                              <Insets left="100.0" top="20.0" />
-                           </VBox.margin>
-                        </AnchorPane>
-                     </children>
+                  <HBox prefHeight="771.0" prefWidth="2051.0">
                      <HBox.margin>
-                        <Insets bottom="10.0" left="100.0" right="10.0" top="90.0" />
-                     </HBox.margin>
-                  </VBox>
-                  <VBox prefHeight="536.0" prefWidth="766.0">
-                     <HBox.margin>
-                        <Insets bottom="160.0" left="160.0" right="160.0" top="90.0" />
+                        <Insets left="100.0" right="10.0" />
                      </HBox.margin>
                      <children>
-                        <AnchorPane prefHeight="756.0" prefWidth="678.0">
+                        <VBox prefHeight="771.0" prefWidth="887.0">
                            <children>
-                              <ImageView fitHeight="618.0" fitWidth="798.0" pickOnBounds="true" preserveRatio="true">
-                                 <image>
-                                    <Image url="@prova.png" />
-                                 </image>
-                              </ImageView>
-                              <Button fx:id="btnCompetitor1" layoutX="189.0" layoutY="117.0" mnemonicParsing="false" onAction="#doCompetitor1" prefHeight="52.0" prefWidth="396.0" style="-fx-background-color: transparent;" text="Competitor 1">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="btnCompetitor2" layoutX="189.0" layoutY="199.0" mnemonicParsing="false" onAction="#doCompetitor2" prefHeight="52.0" prefWidth="396.0" style="-fx-background-color: transparent;" text="Cmpetitor 2">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="btnCompetitor3" layoutX="189.0" layoutY="286.0" mnemonicParsing="false" onAction="#doCompetitor3" prefHeight="52.0" prefWidth="396.0" style="-fx-background-color: transparent;" text="Competitor 3">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Button>
-                              <Button fx:id="btnCompetitor4" layoutX="189.0" layoutY="372.0" mnemonicParsing="false" onAction="#doCompetitor4" prefHeight="52.0" prefWidth="396.0" style="-fx-background-color: transparent;" text="Competitor 4">
-                                 <font>
-                                    <Font name="System Bold" size="18.0" />
-                                 </font>
-                              </Button>
-                              <Label layoutX="157.0" layoutY="123.0" text="1">
-                                 <font>
-                                    <Font name="System Bold" size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="157.0" layoutY="204.0" text="2">
-                                 <font>
-                                    <Font name="System Bold" size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="157.0" layoutY="292.0" text="3">
-                                 <font>
-                                    <Font name="System Bold" size="24.0" />
-                                 </font>
-                              </Label>
-                              <Label layoutX="157.0" layoutY="378.0" text="4">
-                                 <font>
-                                    <Font name="System Bold" size="24.0" />
-                                 </font>
-                              </Label>
-                              <Button fx:id="btnCompara4" layoutX="593.0" layoutY="372.0" mnemonicParsing="false" onAction="#doCompara4" prefHeight="52.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="Compara">
-                                 <padding>
-                                    <Insets left="-20.0" />
-                                 </padding></Button>
-                              <Button fx:id="btnCompara3" layoutX="593.0" layoutY="286.0" mnemonicParsing="false" onAction="#doCompara3" prefHeight="52.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="Compara">
-                                 <padding>
-                                    <Insets left="-20.0" />
-                                 </padding></Button>
-                              <Button fx:id="btnCompara2" layoutX="593.0" layoutY="202.0" mnemonicParsing="false" onAction="#doCompara2" prefHeight="52.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="Compara">
-                                 <padding>
-                                    <Insets left="-20.0" />
-                                 </padding></Button>
-                              <Button fx:id="btnCompara1" graphicTextGap="2.0" layoutX="593.0" layoutY="117.0" mnemonicParsing="false" onAction="#doCompara1" prefHeight="52.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="Compara">
-                                 <padding>
-                                    <Insets left="-20.0" />
-                                 </padding></Button>
-                              <Label layoutX="432.0" prefHeight="70.0" prefWidth="413.0" text="Clicca sull'azienda per analizzarla meglio" />
+                              <AnchorPane prefHeight="542.0" prefWidth="763.0">
+                                 <children>
+                                    <ImageView fitHeight="541.0" fitWidth="588.0" layoutX="-29.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@Azienda_Compara.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label fx:id="lblAzienda" alignment="CENTER" layoutX="132.0" layoutY="195.0" opacity="0.0" prefHeight="71.0" prefWidth="186.0" text="Azienda">
+                                       <font>
+                                          <Font size="36.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnProdotti" layoutX="383.0" layoutY="137.0" mnemonicParsing="false" onAction="#doProdotti" rotate="66.8" style="-fx-background-color: #139b48;" text="Prodotti">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnNews" layoutX="79.0" layoutY="394.0" mnemonicParsing="false" onAction="#doNews" rotate="-140.9" style="-fx-background-color: f8991e;" text="News">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnProgetti" layoutX="-9.0" layoutY="241.0" mnemonicParsing="false" onAction="#doProgetti" prefHeight="50.0" prefWidth="121.0" rotate="-92.3" style="-fx-background-color: #4554a5;" text="Progetti">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnBrevetti" layoutX="260.0" layoutY="433.0" mnemonicParsing="false" onAction="#doBrevetti" rotate="164.2" style="-fx-background-color: #939598;" text="Brevetti">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnAppalti" layoutX="71.0" layoutY="74.0" mnemonicParsing="false" onAction="#doAppalti" rotate="-40.2" style="-fx-background-color: #f8d731;" text="Appalti">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnBilancio" layoutX="247.0" layoutY="41.0" mnemonicParsing="false" onAction="#doBilancio" rotate="16.2" style="-fx-background-color: cd2027;" text="Bilancio">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnArticoli" layoutX="389.0" layoutY="321.0" mnemonicParsing="false" onAction="#doArticoli" rotate="111.9" style="-fx-background-color: #a953a0;" text="Articoli">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnAziendaHome" layoutX="114.0" layoutY="230.0" mnemonicParsing="false" onAction="#doVaiInfoAzienda" prefHeight="71.0" prefWidth="289.0" style="-fx-background-color: transparent;" text="Azienda">
+                                       <font>
+                                          <Font name="System Bold" size="23.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="100.0" top="20.0" />
+                                 </VBox.margin>
+                              </AnchorPane>
+                              <HBox>
+                                 <children>
+                                    <VBox prefHeight="210.0" prefWidth="590.0">
+                                       <children>
+                                          <Label prefHeight="30.0" prefWidth="200.0" text="Peso indicatori bilancio">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="380.0" top="40.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label prefHeight="30.0" prefWidth="200.0" text="Peso indicatori appalti">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="380.0" top="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label prefHeight="30.0" prefWidth="200.0" text="Peso indicatori progetti">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="380.0" top="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label prefHeight="30.0" prefWidth="200.0" text="Peso indicatori brevetti">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="380.0" top="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                          <Label prefHeight="30.0" prefWidth="200.0" text="Peso indicatori articoli">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <VBox.margin>
+                                                <Insets left="380.0" top="10.0" />
+                                             </VBox.margin>
+                                          </Label>
+                                       </children>
+                                    </VBox>
+                                    <VBox prefHeight="218.0" prefWidth="110.0">
+                                       <children>
+                                          <ComboBox fx:id="cmbPesiBil" onAction="#doApriPercen" prefHeight="26.0" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="40.0" />
+                                             </VBox.margin>
+                                          </ComboBox>
+                                          <ComboBox fx:id="cmbPesiApp" onAction="#doApriPercen" prefHeight="26.0" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ComboBox>
+                                          <ComboBox fx:id="cmbPesiPrg" onAction="#doApriPercen" prefHeight="26.0" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ComboBox>
+                                          <ComboBox fx:id="cmbPesiBrv" onAction="#doApriPercen" prefHeight="26.0" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ComboBox>
+                                          <ComboBox fx:id="cmbPesiArt" onAction="#doApriPercen" prefHeight="26.0" prefWidth="150.0">
+                                             <VBox.margin>
+                                                <Insets top="10.0" />
+                                             </VBox.margin>
+                                          </ComboBox>
+                                       </children>
+                                       <HBox.margin>
+                                          <Insets />
+                                       </HBox.margin>
+                                    </VBox>
+                                 </children>
+                                 <VBox.margin>
+                                    <Insets left="180.0" />
+                                 </VBox.margin>
+                              </HBox>
                            </children>
-                        </AnchorPane>
+                        </VBox>
+                        <VBox prefHeight="536.0" prefWidth="766.0">
+                           <HBox.margin>
+                              <Insets bottom="120.0" left="50.0" />
+                           </HBox.margin>
+                           <children>
+                              <AnchorPane prefHeight="756.0" prefWidth="678.0">
+                                 <children>
+                                    <ImageView fitHeight="618.0" fitWidth="798.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.39999999999997726" AnchorPane.rightAnchor="63.40395507812502" AnchorPane.topAnchor="23.200000000000045">
+                                       <image>
+                                          <Image url="@prova.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Button fx:id="btnCompetitor1" layoutX="193.0" layoutY="146.0" mnemonicParsing="false" onAction="#doCompetitor1" prefHeight="52.0" prefWidth="396.0" style="-fx-background-color: transparent;" text="Competitor 1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnCompetitor2" layoutX="188.0" layoutY="234.0" mnemonicParsing="false" onAction="#doCompetitor2" prefHeight="52.0" prefWidth="396.0" style="-fx-background-color: transparent;" text="Cmpetitor 2">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnCompetitor3" layoutX="194.0" layoutY="322.0" mnemonicParsing="false" onAction="#doCompetitor3" prefHeight="52.0" prefWidth="396.0" style="-fx-background-color: transparent;" text="Competitor 3">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="btnCompetitor4" layoutX="188.0" layoutY="407.0" mnemonicParsing="false" onAction="#doCompetitor4" prefHeight="52.0" prefWidth="396.0" style="-fx-background-color: transparent;" text="Competitor 4">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Button>
+                                    <Label layoutX="164.0" layoutY="159.0" text="1">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="164.0" layoutY="243.0" text="2">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="164.0" layoutY="331.0" text="3">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="164.0" layoutY="415.0" prefHeight="35.0" prefWidth="11.0" text="4">
+                                       <font>
+                                          <Font name="System Bold" size="24.0" />
+                                       </font>
+                                    </Label>
+                                    <Button fx:id="btnCompara4" layoutX="591.0" layoutY="407.0" mnemonicParsing="false" onAction="#doCompara4" prefHeight="52.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="Compara">
+                                       <padding>
+                                          <Insets left="-20.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btnCompara3" layoutX="593.0" layoutY="323.0" mnemonicParsing="false" onAction="#doCompara3" prefHeight="52.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="Compara">
+                                       <padding>
+                                          <Insets left="-20.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btnCompara2" layoutX="591.0" layoutY="236.0" mnemonicParsing="false" onAction="#doCompara2" prefHeight="52.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="Compara">
+                                       <padding>
+                                          <Insets left="-20.0" />
+                                       </padding>
+                                    </Button>
+                                    <Button fx:id="btnCompara1" graphicTextGap="2.0" layoutX="591.0" layoutY="151.0" mnemonicParsing="false" onAction="#doCompara1" prefHeight="52.0" prefWidth="85.0" style="-fx-background-color: transparent;" text="Compara">
+                                       <padding>
+                                          <Insets left="-20.0" />
+                                       </padding>
+                                    </Button>
+                                    <Label layoutX="432.0" prefHeight="70.0" prefWidth="413.0" text="Clicca sull'azienda per analizzarla meglio" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </VBox>
                      </children>
-                  </VBox>
+                  </HBox>
+                  <HBox prefHeight="100.0" prefWidth="200.0" />
                </children>
             </HBox>
          </children>
