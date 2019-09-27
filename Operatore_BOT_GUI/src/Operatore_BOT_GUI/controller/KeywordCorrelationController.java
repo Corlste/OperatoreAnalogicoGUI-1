@@ -71,9 +71,9 @@ public class KeywordCorrelationController {
     @FXML
     void showPatentInfo(MouseEvent event) {
     	Brevetto brev = list_brevetti.getSelectionModel().getSelectedItem();
-    	titolo_art.setText(brev.getTitolo());
-    	azienda_art.setText(brev.getPartitaIVA());
-    	text_art.setText(brev.getAbstractBrevetto());
+    	titolo_brev.setText(brev.getTitolo());
+    	azienda_brev.setText(brev.getPartitaIVA());
+    	text_brev.setText(brev.getAbstractBrevetto());
     }
     
     

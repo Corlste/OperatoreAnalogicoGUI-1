@@ -143,27 +143,27 @@
                                     </VBox>
                                     <VBox prefHeight="218.0" prefWidth="110.0">
                                        <children>
-                                          <ComboBox fx:id="cmbPesiBil" onAction="#doApriPercen" prefHeight="26.0" prefWidth="150.0">
+                                          <ComboBox fx:id="cmbPesiBil" prefHeight="26.0" prefWidth="150.0">
                                              <VBox.margin>
                                                 <Insets top="40.0" />
                                              </VBox.margin>
                                           </ComboBox>
-                                          <ComboBox fx:id="cmbPesiApp" onAction="#doApriPercen" prefHeight="26.0" prefWidth="150.0">
+                                          <ComboBox fx:id="cmbPesiApp" prefHeight="26.0" prefWidth="150.0">
                                              <VBox.margin>
                                                 <Insets top="10.0" />
                                              </VBox.margin>
                                           </ComboBox>
-                                          <ComboBox fx:id="cmbPesiPrg" onAction="#doApriPercen" prefHeight="26.0" prefWidth="150.0">
+                                          <ComboBox fx:id="cmbPesiPrg" prefHeight="26.0" prefWidth="150.0">
                                              <VBox.margin>
                                                 <Insets top="10.0" />
                                              </VBox.margin>
                                           </ComboBox>
-                                          <ComboBox fx:id="cmbPesiBrv" onAction="#doApriPercen" prefHeight="26.0" prefWidth="150.0">
+                                          <ComboBox fx:id="cmbPesiBrv" prefHeight="26.0" prefWidth="150.0">
                                              <VBox.margin>
                                                 <Insets top="10.0" />
                                              </VBox.margin>
                                           </ComboBox>
-                                          <ComboBox fx:id="cmbPesiArt" onAction="#doApriPercen" prefHeight="26.0" prefWidth="150.0">
+                                          <ComboBox fx:id="cmbPesiArt" prefHeight="26.0" prefWidth="150.0">
                                              <VBox.margin>
                                                 <Insets top="10.0" />
                                              </VBox.margin>

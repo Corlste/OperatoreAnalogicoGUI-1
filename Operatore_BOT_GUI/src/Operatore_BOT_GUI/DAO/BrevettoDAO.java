@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public List<Brevetto> getBrevettiAzienda (Azienda az) {
 		
 		String partitaIVA = az.getPartitaIVA();
 		final String sqlBrevettiAzienda = "SELECT * FROM brevetti WHERE p_iva=? ;";
-		List<Brevetto> listBrevetti = new LinkedList<Brevetto>();
+		ArrayList<Brevetto> listBrevetti = new ArrayList<Brevetto>();
 		try {
 			Connection conn = DBConnect.getConnection();
 			PreparedStatement st = conn.prepareStatement(sqlBrevettiAzienda);
@@ -28,6 +29,7 @@ public List<Brevetto> getBrevettiAzienda (Azienda az) {
 			}
 			st.close();
 			conn.close();
+			az.insertBrevetti(listBrevetti);
 			return listBrevetti;
 		}catch (SQLException e) {
 			e.printStackTrace();

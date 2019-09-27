@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class ArticoloDAO {
 	public List<Articolo> getArticoliAzienda(Azienda az){
 		String partitaIVA  = az.getPartitaIVA();
 		final String sqlArticolo = "SELECT * FROM articoli where p_iva=?";
-		List<Articolo> articoli = new LinkedList<Articolo>();
+		ArrayList<Articolo> articoli = new ArrayList<Articolo>();
 		try {
 			Connection conn = DBConnect.getConnection();
 			PreparedStatement st = conn.prepareStatement(sqlArticolo);
@@ -28,6 +29,8 @@ public class ArticoloDAO {
 			}
 			st.close();
 			conn.close();
+			
+			az.setArticoli(articoli);
 			return articoli;
 			
 		}catch (SQLException e) {

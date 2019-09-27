@@ -7,12 +7,15 @@ import java.io.IOException;
  */
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
 import java.util.StringTokenizer;
 import javafx.scene.control.ComboBox;
 import Operatore_BOT_GUI.model.Azienda;
 import Operatore_BOT_GUI.model.Model;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -54,19 +57,19 @@ public class homeController {
     private Button btnBilancio; // Value injected by FXMLLoader
     
     @FXML // fx:id="cmbPesiBil"
-    private ComboBox<?> cmbPesiBil; // Value injected by FXMLLoader
+    private ComboBox<Integer> cmbPesiBil; // Value injected by FXMLLoader
 
     @FXML // fx:id="cmbPesiApp"
-    private ComboBox<?> cmbPesiApp; // Value injected by FXMLLoader
+    private ComboBox<Integer> cmbPesiApp; // Value injected by FXMLLoader
 
     @FXML // fx:id="cmbPesiPrg"
-    private ComboBox<?> cmbPesiPrg; // Value injected by FXMLLoader
+    private ComboBox<Integer> cmbPesiPrg; // Value injected by FXMLLoader
 
     @FXML // fx:id="cmbPesiBrv"
-    private ComboBox<?> cmbPesiBrv; // Value injected by FXMLLoader
+    private ComboBox<Integer> cmbPesiBrv; // Value injected by FXMLLoader
 
     @FXML // fx:id="cmbPesiArt"
-    private ComboBox<?> cmbPesiArt; // Value injected by FXMLLoader
+    private ComboBox<Integer> cmbPesiArt; // Value injected by FXMLLoader
 
     @FXML // fx:id="btnArticoli"
     private Button btnArticoli; // Value injected by FXMLLoader
@@ -122,6 +125,22 @@ public class homeController {
     			}
     		}
     	}
+    	
+    	this.populateWeights();
+    	
+    }
+    
+    private void populateWeights () {
+    	ArrayList<Integer> ints = new ArrayList<Integer>();
+    	for (int i=1; i<=10; i++) {
+    		ints.add(i);
+    	}
+    	ObservableList<Integer> percentages = FXCollections.observableArrayList(ints);
+    	this.cmbPesiApp.setItems(percentages);
+    	this.cmbPesiArt.setItems(percentages);
+    	this.cmbPesiBil.setItems(percentages);
+    	this.cmbPesiBrv.setItems(percentages);
+    	this.cmbPesiPrg.setItems(percentages);
     }
 
     @FXML
@@ -381,10 +400,6 @@ public class homeController {
 
     }
 
-    @FXML
-    void doApriPercen(ActionEvent event) {
-
-    }
 
     @FXML // This method is called by the FXMLLoader when initialization is complete
     void initialize() {

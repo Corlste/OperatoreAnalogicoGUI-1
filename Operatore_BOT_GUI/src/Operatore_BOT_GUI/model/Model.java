@@ -47,6 +47,26 @@ public class Model {
 		
 	}
 	
+	public float calculatePatentsIndex (Azienda az) {
+		return az.countBrevetti();
+	}
+	
+	public float calculateWebRepIndex (Azienda az) {
+		return az.countArticoli();
+	}
+	
+	public float calculateBilancioIndex (Azienda az) {
+		return 0;
+	}
+	
+	public float calculateAppaltiIndex (Azienda az) {
+		return 0;
+	}
+	
+	public float calculateProjectsIndex (Azienda az) {
+		return 0;
+	}
+	
 	
 	public ArrayList<Articolo> getArticoliCorrelati (String keyword){
 		

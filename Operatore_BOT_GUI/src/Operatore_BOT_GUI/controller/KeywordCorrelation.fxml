@@ -69,7 +69,7 @@
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="titolo_art" text="titolo" textAlignment="CENTER">
+                                          <Label fx:id="titolo_art" prefHeight="53.0" prefWidth="851.0" text="titolo" textOverrun="CLIP">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>
@@ -83,7 +83,7 @@
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="azienda_art" text="titolo" textAlignment="CENTER">
+                                          <Label fx:id="azienda_art" text="titolo">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>
@@ -129,7 +129,7 @@
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="titolo_brev" text="titolo" textAlignment="CENTER">
+                                          <Label fx:id="titolo_brev" prefHeight="63.0" prefWidth="847.0" text="titolo" textOverrun="CLIP">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>
@@ -143,7 +143,7 @@
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="azienda_brev" text="titolo" textAlignment="CENTER">
+                                          <Label fx:id="azienda_brev" text="titolo">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>

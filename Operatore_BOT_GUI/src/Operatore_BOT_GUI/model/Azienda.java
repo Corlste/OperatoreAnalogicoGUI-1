@@ -10,6 +10,8 @@ public class Azienda {
 		private int webRepIndex = 0;
 		
 		private ArrayList<Brevetto> brevetti = new ArrayList<Brevetto>();
+		private ArrayList<Articolo> articoli = new ArrayList<Articolo>();
+
 		
 		private String indirizzo;
 		private String comune;
@@ -69,6 +71,10 @@ public class Azienda {
 			return brevetti;
 		}
 		
+		public ArrayList<Articolo> getArticoli() {
+			return articoli;
+		}
+		
 		// INSERISCE LISTA BREVETTI
 		public void insertBrevetti (ArrayList<Brevetto> lista) {
 
@@ -86,6 +92,11 @@ public class Azienda {
 		public int countBrevetti () {
 			
 			return brevetti.size();
+		}
+		
+		public int countArticoli () {
+			
+			return articoli.size();
 		}
 		
 
@@ -236,6 +247,10 @@ public class Azienda {
 
 		public void setBrevetti(ArrayList<Brevetto> brevetti) {
 			this.brevetti = brevetti;
+		}
+		
+		public void setArticoli(ArrayList<Articolo> brevetti) {
+			this.articoli = brevetti;
 		}
 
 		@Override
