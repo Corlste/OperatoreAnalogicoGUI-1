@@ -2,6 +2,7 @@ package Operatore_BOT_GUI.controller;
 
 
 
+import java.awt.Image;
 import java.io.IOException;
 
 /**
@@ -18,6 +19,8 @@ import Operatore_BOT_GUI.model.Azienda;
 import Operatore_BOT_GUI.model.Bilancio;
 import Operatore_BOT_GUI.model.Model;
 import Operatore_BOT_GUI.model.Progetto;
+import Operatore_BOT_GUI.model.SpiderChart;
+import javafx.embed.swing.SwingFXUtils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,6 +31,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.ImageView;
+import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 
 public class ComparaController {
@@ -1090,6 +1095,13 @@ public class ComparaController {
 
     @FXML // fx:id="hypKeyCac10"
     private Hyperlink hypKeyCac10; // Value injected by FXMLLoader
+    
+    @FXML
+    private ImageView chart1;
+
+    @FXML
+    private ImageView chart2;
+    
     Model model;
     
     /*
@@ -1559,7 +1571,77 @@ public class ComparaController {
    		}
    		
    		
+   		this.drawChart1();
+   		this.drawChart2();
+   		
     }
+    
+    
+    private void drawChart1 () {
+    	
+    	String[] labels = {"ROE", "ROI", "Leva Op.", "Leva Fin.", "ROS"};
+    	SpiderChart chart = new SpiderChart(labels);
+    	float[] values1 = {Float.parseFloat(this.txtROE18.getText()),
+    				Float.parseFloat(this.txtROI18.getText()),
+    				Float.parseFloat(this.txtLevOp18.getText()),
+    				Float.parseFloat(this.txtLevFin18.getText()),
+    				Float.parseFloat(this.txtROS18.getText())};
+    	float[] values2 = {Float.parseFloat(this.txtROE181.getText()),
+				Float.parseFloat(this.txtROI181.getText()),
+				Float.parseFloat(this.txtLevOp181.getText()),
+				Float.parseFloat(this.txtLevFin181.getText()),
+				Float.parseFloat(this.txtROS181.getText())};
+    	
+    	chart.insertDataSeries(lblAziendaComp.getText(), values1);
+    	chart.insertDataSeries(btnCompetitorComp.getText(), values2);
+    	
+    	this.chart1.setImage(chart.drawChart());
+    }
+    
+private void drawChart2 () {
+    	
+    	String[] labels = {"Fatturato", "Reddito Op.", "Margine Str. Pr.", "R&D", "Risultato Es."};
+    	SpiderChart chart = new SpiderChart(labels);
+    	float[] values1 = {Float.parseFloat(this.txtfatturato18.getText())/100,
+    				Float.parseFloat(this.txtRE18.getText()),
+    				Float.parseFloat(this.txtMSP18.getText()),
+    				Float.parseFloat(this.txtInvestimentiRD18.getText()),
+    				Float.parseFloat(this.txtRE18.getText())};
+    	float[] values2 = {Float.parseFloat(this.txtfatturato181.getText())/100,
+				Float.parseFloat(this.txtRE181.getText()),
+				Float.parseFloat(this.txtMSP181.getText()),
+				Float.parseFloat(this.txtInvestimentiRD181.getText()),
+				Float.parseFloat(this.txtRE181.getText())};
+    	
+    	chart.insertDataSeries(lblAziendaComp.getText(), values1);
+    	chart.insertDataSeries(btnCompetitorComp.getText(), values2);
+    	
+    	this.chart2.setImage(chart.drawChart());
+    }
+
+
+	@FXML
+	void goHome(MouseEvent event) {
+		FXMLLoader loader = new FXMLLoader(getClass().getResource("Start.fxml"));
+		AnchorPane root = null;
+		try {
+			root = (AnchorPane)loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		StartController controller = loader.getController();
+		controller.setModel(model);
+	
+//		Parent parent = FXMLLoader.load(getClass().getResource("Home.fxml"));
+//		Scene goToHome = new Scene(parent);
+		Scene goToHome = new Scene(root);
+		Stage windowHome = (Stage)((Node)event.getSource()).getScene().getWindow();
+		windowHome.setScene(goToHome);
+		windowHome.show();
+	}
+
+
     
     @FXML
     void doEstraiAppalti(ActionEvent event) throws IOException {

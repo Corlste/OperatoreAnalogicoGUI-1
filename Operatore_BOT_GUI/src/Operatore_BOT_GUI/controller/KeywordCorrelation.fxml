@@ -25,9 +25,9 @@
 					<children>
 						<VBox prefHeight="1000.0" prefWidth="1920.0">
 							<children>
-								<HBox prefHeight="180.0" prefWidth="1920.0">
+								<HBox alignment="CENTER_LEFT" prefHeight="180.0" prefWidth="1920.0">
 									<children>
-										<ImageView fx:id="imgComparaangAz" fitHeight="180.0" fitWidth="289.0" pickOnBounds="true" preserveRatio="true">
+										<ImageView fx:id="imgComparaAz" fitHeight="180.0" fitWidth="289.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
 											<image>
 												<Image url="@sfondo_conmpara.png" />
 											</image>
@@ -69,7 +69,7 @@
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="titolo_art" prefHeight="53.0" prefWidth="851.0" text="titolo" textOverrun="CLIP">
+                                          <Label fx:id="titolo_art" prefHeight="53.0" prefWidth="851.0" text="titolo" textOverrun="CLIP" wrapText="true">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>
@@ -101,7 +101,7 @@
                                     </HBox>
                                     <HBox prefHeight="319.0" prefWidth="920.0">
                                        <children>
-                                          <TextArea fx:id="text_art" editable="false" prefHeight="319.0" prefWidth="926.0" style="-fx-background-color: transparent;" stylesheets="@style.css">
+                                          <TextArea fx:id="text_art" editable="false" prefHeight="319.0" prefWidth="926.0" style="-fx-background-color: transparent;" stylesheets="@style.css" wrapText="true">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>
@@ -129,7 +129,7 @@
                                                 <Font name="System Bold" size="16.0" />
                                              </font>
                                           </Label>
-                                          <Label fx:id="titolo_brev" prefHeight="63.0" prefWidth="847.0" text="titolo" textOverrun="CLIP">
+                                          <Label fx:id="titolo_brev" prefHeight="63.0" prefWidth="847.0" text="titolo" textOverrun="CLIP" wrapText="true">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>
@@ -161,7 +161,7 @@
                                     </HBox>
                                     <HBox prefHeight="319.0" prefWidth="920.0">
                                        <children>
-                                          <TextArea fx:id="text_brev" editable="false" prefHeight="319.0" prefWidth="926.0" style="-fx-background-color: transparent;" stylesheets="@style.css">
+                                          <TextArea fx:id="text_brev" editable="false" prefHeight="319.0" prefWidth="926.0" style="-fx-background-color: transparent;" stylesheets="@style.css" wrapText="true">
                                              <font>
                                                 <Font size="16.0" />
                                              </font>

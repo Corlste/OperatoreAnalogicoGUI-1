@@ -309,115 +309,115 @@
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font></Label>
-                                    <TextField style="-fx-background-color: transparent;" text="2016" GridPane.columnIndex="1" GridPane.rowIndex="29">
+                                    <TextField editable="false" style="-fx-background-color: transparent;" text="2016" GridPane.columnIndex="1" GridPane.rowIndex="29">
                                        <font>
                                           <Font name="System Bold" size="13.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtfatturato161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="30">
+                                    <TextField fx:id="txtfatturato161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="30">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtVA161Az" onAction="#Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="31">
+                                    <TextField fx:id="txtVA161Az" editable="false" onAction="#Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="31">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtMOL161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="32">
+                                    <TextField fx:id="txtMOL161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="32">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtRO161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="33">
+                                    <TextField fx:id="txtRO161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="33">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtRE161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="34">
+                                    <TextField fx:id="txtRE161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="34">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtCCN161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="35">
+                                    <TextField fx:id="txtCCN161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="35">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtKN161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="36">
+                                    <TextField fx:id="txtKN161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="36">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtROI161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="37">
+                                    <TextField fx:id="txtROI161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="37">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtROE161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="38">
+                                    <TextField fx:id="txtROE161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="38">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtROS161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="39">
+                                    <TextField fx:id="txtROS161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="39">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtGIV161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="40">
+                                    <TextField fx:id="txtGIV161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="40">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtLevFin161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="41">
+                                    <TextField fx:id="txtLevFin161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="41">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtLevOp161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="42">
+                                    <TextField fx:id="txtLevOp161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="42">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtLeverage161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="43">
+                                    <TextField fx:id="txtLeverage161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="43">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtMSP161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="44">
+                                    <TextField fx:id="txtMSP161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="44">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtMSS161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="45">
+                                    <TextField fx:id="txtMSS161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="45">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtCurrentRatio161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="46">
+                                    <TextField fx:id="txtCurrentRatio161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="46">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtAcidTest161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="47">
+                                    <TextField fx:id="txtAcidTest161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="47">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtIndLiquidita161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="48">
+                                    <TextField fx:id="txtIndLiquidita161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="48">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtIndIndebBrev161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="49">
+                                    <TextField fx:id="txtIndIndebBrev161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="49">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtDebBanche161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="50">
+                                    <TextField fx:id="txtDebBanche161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="50">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtOnFin161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="51">
+                                    <TextField fx:id="txtOnFin161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="51">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtRicAddetto161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="52">
+                                    <TextField fx:id="txtRicAddetto161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="52">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtRisEsercAddeto161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="53">
+                                    <TextField fx:id="txtRisEsercAddeto161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="53">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtValAggAddeto161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="54">
+                                    <TextField fx:id="txtValAggAddeto161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="54">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtCostAddetto161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="55">
+                                    <TextField fx:id="txtCostAddetto161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="55">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtDurataMedCrediti161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="56">
+                                    <TextField fx:id="txtDurataMedCrediti161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="56">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
@@ -429,99 +429,99 @@
                                        <font>
                                           <Font name="System Bold" size="18.0" />
                                        </font></Label>
-                                    <TextField fx:id="txtDurataMedDebiti161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="57">
+                                    <TextField fx:id="txtDurataMedDebiti161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="57">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtInvestimentiRD161Az" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="58">
+                                    <TextField fx:id="txtInvestimentiRD161Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="58">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField style="-fx-background-color: transparent;" text="2017" GridPane.columnIndex="2" GridPane.rowIndex="29">
+                                    <TextField editable="false" style="-fx-background-color: transparent;" text="2017" GridPane.columnIndex="2" GridPane.rowIndex="29">
                                        <font>
                                           <Font name="System Bold" size="13.0" />
                                        </font></TextField>
-                                    <TextField style="-fx-background-color: transparent;" text="2018" GridPane.columnIndex="3" GridPane.rowIndex="29">
+                                    <TextField editable="false" style="-fx-background-color: transparent;" text="2018" GridPane.columnIndex="3" GridPane.rowIndex="29">
                                        <font>
                                           <Font name="System Bold" size="13.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtfatturato171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="30">
+                                    <TextField fx:id="txtfatturato171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="30">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtVA171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="31">
+                                    <TextField fx:id="txtVA171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="31">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtMOL171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="32">
+                                    <TextField fx:id="txtMOL171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="32">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtRO171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="33">
+                                    <TextField fx:id="txtRO171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="33">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtRE171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="34">
+                                    <TextField fx:id="txtRE171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="34">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtCCN171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="35">
+                                    <TextField fx:id="txtCCN171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="35">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtKN171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="36">
+                                    <TextField fx:id="txtKN171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="36">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtROI171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="37">
+                                    <TextField fx:id="txtROI171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="37">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtROE171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="38">
+                                    <TextField fx:id="txtROE171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="38">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtROS171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="39">
+                                    <TextField fx:id="txtROS171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="39">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtGIV171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="40">
+                                    <TextField fx:id="txtGIV171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="40">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtLevFin171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="41">
+                                    <TextField fx:id="txtLevFin171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="41">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtLevOp171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="42">
+                                    <TextField fx:id="txtLevOp171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="42">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtLeverage171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="43">
+                                    <TextField fx:id="txtLeverage171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="43">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtMSP171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="44">
+                                    <TextField fx:id="txtMSP171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="44">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtMSS171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="45">
+                                    <TextField fx:id="txtMSS171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="45">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtCurrentRatio171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="46">
+                                    <TextField fx:id="txtCurrentRatio171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="46">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtAcidTest171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="47">
+                                    <TextField fx:id="txtAcidTest171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="47">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtIndLiquidita171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="48">
+                                    <TextField fx:id="txtIndLiquidita171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="48">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtIndIndebBrev171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="49">
+                                    <TextField fx:id="txtIndIndebBrev171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="49">
                                        <GridPane.margin>
                                           <Insets />
                                        </GridPane.margin>
@@ -529,155 +529,155 @@
                                           <Font size="14.0" />
                                        </font>
                                     </TextField>
-                                    <TextField fx:id="txtfatturato181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="30">
+                                    <TextField fx:id="txtfatturato181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="30">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtVA181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="31">
+                                    <TextField fx:id="txtVA181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="31">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtMOL181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="32">
+                                    <TextField fx:id="txtMOL181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="32">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtRO181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="33">
+                                    <TextField fx:id="txtRO181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="33">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtRE181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="34">
+                                    <TextField fx:id="txtRE181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="34">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtCCN181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="35">
+                                    <TextField fx:id="txtCCN181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="35">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtKN181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="36">
+                                    <TextField fx:id="txtKN181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="36">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtROI181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="37">
+                                    <TextField fx:id="txtROI181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="37">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtROE181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="38">
+                                    <TextField fx:id="txtROE181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="38">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtROS181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="39">
+                                    <TextField fx:id="txtROS181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="39">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtGIV181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="40">
+                                    <TextField fx:id="txtGIV181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="40">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtLevFin181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="41">
+                                    <TextField fx:id="txtLevFin181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="41">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtDebBanche171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="50">
+                                    <TextField fx:id="txtDebBanche171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="50">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtOnFin171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="51">
+                                    <TextField fx:id="txtOnFin171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="51">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtLevOp181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="42">
+                                    <TextField fx:id="txtLevOp181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="42">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtMSP181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="44">
+                                    <TextField fx:id="txtMSP181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="44">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtMSS181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="45">
+                                    <TextField fx:id="txtMSS181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="45">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtRicAddetto171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="52">
+                                    <TextField fx:id="txtRicAddetto171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="52">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtRisEsercAddeto171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="53">
+                                    <TextField fx:id="txtRisEsercAddeto171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="53">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtValAggAddeto171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="54">
+                                    <TextField fx:id="txtValAggAddeto171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="54">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtCostAddetto171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="55">
+                                    <TextField fx:id="txtCostAddetto171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="55">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtDurataMedCrediti171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="56">
+                                    <TextField fx:id="txtDurataMedCrediti171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="56">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtDurataMedDebiti171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="57">
+                                    <TextField fx:id="txtDurataMedDebiti171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="57">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtInvestimentiRD171Az" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="58">
+                                    <TextField fx:id="txtInvestimentiRD171Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="2" GridPane.rowIndex="58">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtCurrentRatio181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="46">
+                                    <TextField fx:id="txtCurrentRatio181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="46">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtAcidTest181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="47">
+                                    <TextField fx:id="txtAcidTest181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="47">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtIndLiquidita181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="48">
+                                    <TextField fx:id="txtIndLiquidita181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="48">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtIndIndebBrev181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="49">
+                                    <TextField fx:id="txtIndIndebBrev181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="49">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtDebBanche181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="50">
+                                    <TextField fx:id="txtDebBanche181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="50">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtOnFin181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="51">
+                                    <TextField fx:id="txtOnFin181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="51">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtRicAddetto181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="52">
+                                    <TextField fx:id="txtRicAddetto181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="52">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtRisEsercAddeto181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="53">
+                                    <TextField fx:id="txtRisEsercAddeto181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="53">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtValAggAddeto181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="54">
+                                    <TextField fx:id="txtValAggAddeto181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="54">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtCostAddetto181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="55">
+                                    <TextField fx:id="txtCostAddetto181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="55">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtDurataMedCrediti181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="56">
+                                    <TextField fx:id="txtDurataMedCrediti181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="56">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtDurataMedDebiti181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="57">
+                                    <TextField fx:id="txtDurataMedDebiti181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="57">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtInvestimentiRD181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="58">
+                                    <TextField fx:id="txtInvestimentiRD181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="58">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>
-                                    <TextField fx:id="txtLeverage181Az" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="43">
+                                    <TextField fx:id="txtLeverage181Az" editable="false" style="-fx-background-color: transparent;" GridPane.columnIndex="3" GridPane.rowIndex="43">
                                        <font>
                                           <Font size="14.0" />
                                        </font></TextField>

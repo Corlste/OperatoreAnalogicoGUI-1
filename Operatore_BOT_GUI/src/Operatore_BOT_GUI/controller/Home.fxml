@@ -22,7 +22,7 @@
          <children>
             <HBox prefHeight="180.0" prefWidth="200.0">
                <children>
-                  <ImageView fitHeight="180.0" fitWidth="283.0" pickOnBounds="true" preserveRatio="true">
+                  <ImageView fitHeight="180.0" fitWidth="283.0" onMouseClicked="#goHome" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@sfondo_conmpara.png" />
                      </image>

@@ -435,6 +435,8 @@ import javafx.stage.Stage;
 	    	Bilancio bilancio2018 = model.getBilancioAziendaAnno(aziendaSel, 2018);
 	    	
 	    	txtfatturato161Az.setText(String.valueOf(bilancio2016.getRicavi()));
+	    	System.out.println(bilancio2016.getRicavi());
+	    	System.out.println(String.valueOf(bilancio2016.getRicavi()));
 	    	txtVA161Az.setText(String.valueOf(bilancio2016.getValoreAggiunto()));
 	    	txtMOL161Az.setText(String.valueOf(bilancio2016.getMOL()));
 	    	txtRO161Az.setText(String.valueOf(bilancio2016.getRedditoOperativo()));

@@ -1,5 +1,6 @@
 package Operatore_BOT_GUI.controller;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -12,6 +13,9 @@ import Operatore_BOT_GUI.model.Model;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
@@ -19,6 +23,8 @@ import javafx.scene.control.MultipleSelectionModel;
 import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TextArea;
 import javafx.scene.input.MouseEvent;
+import javafx.scene.layout.AnchorPane;
+import javafx.stage.Stage;
 
 public class KeywordCorrelationController {
 	
@@ -74,6 +80,28 @@ public class KeywordCorrelationController {
     	titolo_brev.setText(brev.getTitolo());
     	azienda_brev.setText(brev.getPartitaIVA());
     	text_brev.setText(brev.getAbstractBrevetto());
+    }    
+
+    
+    @FXML
+    void goHome(MouseEvent event) {
+    	FXMLLoader loader = new FXMLLoader(getClass().getResource("Start.fxml"));
+		AnchorPane root = null;
+		try {
+			root = (AnchorPane)loader.load();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    	StartController controller = loader.getController();
+		controller.setModel(model);
+		
+//    	Parent parent = FXMLLoader.load(getClass().getResource("Home.fxml"));
+//    	Scene goToHome = new Scene(parent);
+    	Scene goToHome = new Scene(root);
+    	Stage windowHome = (Stage)((Node)event.getSource()).getScene().getWindow();
+    	windowHome.setScene(goToHome);
+    	windowHome.show();
     }
     
     
