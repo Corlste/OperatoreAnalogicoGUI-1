@@ -2,7 +2,6 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.control.TextField?>
@@ -1244,12 +1243,12 @@
                         <Insets bottom="20.0" left="150.0" right="150.0" top="20.0" />
                      </padding>
                      <children>
-                        <ImageView fx:id="chart1" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="chart1" fitHeight="400.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
                               <Insets left="100.0" right="100.0" />
                            </HBox.margin>
                         </ImageView>
-                        <ImageView fx:id="chart2" fitHeight="400.0" fitWidth="400.0" pickOnBounds="true" preserveRatio="true">
+                        <ImageView fx:id="chart2" fitHeight="400.0" fitWidth="500.0" pickOnBounds="true" preserveRatio="true">
                            <HBox.margin>
                               <Insets left="100.0" right="100.0" />
                            </HBox.margin>
@@ -1670,367 +1669,64 @@
                         </GridPane>
                      </children>
                   </HBox>
-                  <HBox prefHeight="98.0" prefWidth="1992.0">
+                  <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="1992.0">
                      <VBox.margin>
                         <Insets top="50.0" />
                      </VBox.margin>
                      <children>
-                        <GridPane prefHeight="87.0" prefWidth="786.0">
+                        <GridPane prefHeight="34.0" prefWidth="786.0">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="515.2" minWidth="10.0" prefWidth="281.1333068847656" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="517.8666503906251" minWidth="0.0" prefWidth="505.06669311523444" />
                            </columnConstraints>
                            <rowConstraints>
                               <RowConstraints maxHeight="51.9999755859375" minHeight="10.0" prefHeight="26.266552734375" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="88.26657905578614" minHeight="10.0" prefHeight="71.333447265625" valignment="TOP" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="51.9999755859375" minHeight="10.0" prefHeight="26.266552734375" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
                               <Label fx:id="lblNumBack" prefHeight="26.0" prefWidth="220.0" text="Numero Brevetti">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font></Label>
-                              <TextField fx:id="txtNumBack" style="-fx-background-color: transparent;" GridPane.columnIndex="1" />
-                              <Label alignment="TOP_LEFT" contentDisplay="TOP" prefHeight="32.0" prefWidth="170.0" text="Keywords brevetti" GridPane.rowIndex="1">
+                              <TextField fx:id="txtNumBrev1" style="-fx-background-color: transparent;" GridPane.columnIndex="1" />
+                              <Label text="Numero Articoli" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <children>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Hyperlink fx:id="hypKeyC1" alignment="CENTER" onAction="#doOpenLinkBr" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyC2" alignment="CENTER" onAction="#doOpenLinkBr" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyC3" alignment="CENTER" onAction="#doOpenLinkBr" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyC4" alignment="CENTER" onAction="#doOpenLinkBr" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyC5" alignment="CENTER" onAction="#doOpenLinkBr" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Hyperlink fx:id="hypKeyC6" alignment="CENTER" onAction="#doOpenLinkBr" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyC7" alignment="CENTER" onAction="#doOpenLinkBr" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyC8" alignment="CENTER" onAction="#doOpenLinkBr" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyC9" alignment="CENTER" onAction="#doOpenLinkBr" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyC10" alignment="CENTER" onAction="#doOpenLinkBr" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </VBox>
+                              <TextField fx:id="txtNumArt1" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                            <HBox.margin>
                               <Insets left="150.0" />
                            </HBox.margin>
                         </GridPane>
-                        <GridPane prefHeight="100.0" prefWidth="800.0">
+                        <GridPane prefHeight="35.0" prefWidth="800.0">
                            <columnConstraints>
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.20000000000005" minWidth="10.0" prefWidth="298.93330078125" />
                               <ColumnConstraints hgrow="SOMETIMES" maxWidth="507.20007324218744" minWidth="0.0" prefWidth="501.86669921874994" />
                            </columnConstraints>
                            <rowConstraints>
                               <RowConstraints maxHeight="42.9999755859375" minHeight="10.0" prefHeight="30.1999267578125" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="68.6000732421875" minHeight="10.0" prefHeight="68.6000732421875" valignment="TOP" vgrow="SOMETIMES" />
+                              <RowConstraints maxHeight="68.6000732421875" minHeight="10.0" prefHeight="68.6000732421875" valignment="CENTER" vgrow="SOMETIMES" />
                            </rowConstraints>
                            <children>
                               <Label fx:id="lblNumBack1" prefHeight="26.0" prefWidth="209.0" text="Numero Brevetti">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font></Label>
-                              <TextField fx:id="txtNumBack1" prefHeight="26.0" prefWidth="189.0" style="-fx-background-color: transparent;" GridPane.columnIndex="1" />
-                              <Label prefHeight="26.0" prefWidth="272.0" text="Keywords brevetti" GridPane.rowIndex="1">
+                              <TextField fx:id="txtNumBrev2" prefHeight="26.0" prefWidth="189.0" style="-fx-background-color: transparent;" GridPane.columnIndex="1" />
+                              <Label prefHeight="26.0" prefWidth="272.0" text="Numero Articoli" GridPane.rowIndex="1">
                                  <font>
                                     <Font name="System Bold" size="16.0" />
                                  </font>
                               </Label>
-                              <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <children>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Hyperlink fx:id="hypKeyCc1" alignment="CENTER" onAction="#doOpenLinkBrC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCc2" alignment="CENTER" onAction="#doOpenLinkBrC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCc3" alignment="CENTER" onAction="#doOpenLinkBrC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCc4" alignment="CENTER" onAction="#doOpenLinkBrC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCc5" alignment="CENTER" onAction="#doOpenLinkBrC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Hyperlink fx:id="hypKeyCc6" alignment="CENTER" onAction="#doOpenLinkBrC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCc7" alignment="CENTER" onAction="#doOpenLinkBrC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCc8" alignment="CENTER" onAction="#doOpenLinkBrC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCc9" alignment="CENTER" onAction="#doOpenLinkBrC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCc10" alignment="CENTER" onAction="#doOpenLinkBrC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </VBox>
+                              <TextField fx:id="txtNumArt2" style="-fx-background-color: transparent;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                            </children>
                            <HBox.margin>
                               <Insets left="115.0" />
                            </HBox.margin>
                         </GridPane>
                      </children>
-                  </HBox>
-                  <HBox prefHeight="93.0" prefWidth="1992.0">
-                     <children>
-                        <GridPane prefHeight="73.0" prefWidth="800.0">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.20000000000005" minWidth="0.0" prefWidth="281.0666442871094" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="523.4666870117187" minWidth="0.0" prefWidth="519.7333557128906" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints maxHeight="39.9999755859375" minHeight="10.0" prefHeight="23.4666748046875" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="70.1333251953125" minHeight="10.0" prefHeight="70.1333251953125" valignment="TOP" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <Label fx:id="lblNumArtRil1" prefHeight="26.0" prefWidth="206.0" text="Numero articoli ">
-                                 <font>
-                                    <Font name="System Bold" size="16.0" />
-                                 </font></Label>
-                              <TextField fx:id="txtNumArtRil1" style="-fx-background-color: transparent;" GridPane.columnIndex="1" />
-                              <Label prefHeight="41.0" prefWidth="234.0" text="Keiwords articoli" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font name="System Bold" size="16.0" />
-                                 </font>
-                              </Label>
-                              <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <children>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Hyperlink fx:id="hypKeyCa1" alignment="CENTER" onAction="#doOpenLinkArt" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCa2" alignment="CENTER" onAction="#doOpenLinkArt" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCa3" alignment="CENTER" onAction="#doOpenLinkArt" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCa4" alignment="CENTER" onAction="#doOpenLinkArt" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCa5" alignment="CENTER" onAction="#doOpenLinkArt" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Hyperlink fx:id="hypKeyCa6" alignment="CENTER" onAction="#doOpenLinkArt" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCa7" alignment="CENTER" onAction="#doOpenLinkArt" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCa8" alignment="CENTER" onAction="#doOpenLinkArt" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCa9" alignment="CENTER" onAction="#doOpenLinkArt" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCa10" alignment="CENTER" onAction="#doOpenLinkArt" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </VBox>
-                           </children>
-                           <HBox.margin>
-                              <Insets left="150.0" />
-                           </HBox.margin>
-                        </GridPane>
-                        <GridPane prefHeight="73.0" prefWidth="800.0">
-                           <columnConstraints>
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="347.20000000000005" minWidth="0.0" prefWidth="301.933349609375" />
-                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="497.86665039062495" minWidth="0.0" prefWidth="497.86665039062495" />
-                           </columnConstraints>
-                           <rowConstraints>
-                              <RowConstraints maxHeight="39.9999755859375" minHeight="10.0" prefHeight="30.4" vgrow="SOMETIMES" />
-                              <RowConstraints maxHeight="65.6000732421875" minHeight="10.0" prefHeight="62.4" valignment="TOP" vgrow="SOMETIMES" />
-                           </rowConstraints>
-                           <children>
-                              <Label fx:id="lblNumArtRil" prefHeight="26.0" prefWidth="194.0" text="Numero articoli ">
-                                 <font>
-                                    <Font name="System Bold" size="16.0" />
-                                 </font></Label>
-                              <TextField fx:id="txtNumArtRil" style="-fx-background-color: transparent;" GridPane.columnIndex="1" />
-                              <Label prefHeight="38.0" prefWidth="199.0" text="Keywords articoli" GridPane.rowIndex="1">
-                                 <font>
-                                    <Font name="System Bold" size="16.0" />
-                                 </font>
-                              </Label>
-                              <VBox GridPane.columnIndex="1" GridPane.rowIndex="1">
-                                 <children>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Hyperlink fx:id="hypKeyCac1" alignment="CENTER" onAction="#doOpenLinkArC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCac2" alignment="CENTER" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCac3" alignment="CENTER" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCac4" alignment="CENTER" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCac5" alignment="CENTER" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                       </children>
-                                    </HBox>
-                                    <HBox prefHeight="100.0" prefWidth="200.0">
-                                       <children>
-                                          <Hyperlink fx:id="hypKeyCac6" alignment="CENTER" onAction="#doOpenLinkArC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCac7" alignment="CENTER" onAction="#doOpenLinkArC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCac8" alignment="CENTER" onAction="#doOpenLinkArC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCac9" alignment="CENTER" onAction="#doOpenLinkArC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                          <Hyperlink fx:id="hypKeyCac10" alignment="CENTER" onAction="#doOpenLinkArC" prefWidth="100.0" text="Hyperlink">
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                          </Hyperlink>
-                                       </children>
-                                    </HBox>
-                                 </children>
-                              </VBox>
-                           </children>
-                           <HBox.margin>
-                              <Insets left="100.0" />
-                           </HBox.margin>
-                        </GridPane>
-                     </children>
-                     <VBox.margin>
-                        <Insets top="50.0" />
-                     </VBox.margin>
                   </HBox>
                </children>
             </VBox>

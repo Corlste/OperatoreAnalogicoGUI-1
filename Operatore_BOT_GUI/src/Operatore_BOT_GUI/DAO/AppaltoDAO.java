@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -16,7 +17,7 @@ public class AppaltoDAO {
 		
 		String partitaIVA = az.getPartitaIVA();
 		final String sqlAppaltiAzienda = "SELECT * FROM appalti WHERE p_iva=? ;";
-		List<Appalto> appalti = new LinkedList<Appalto>();
+		ArrayList<Appalto> appalti = new ArrayList<Appalto>();
 		try {
 			Connection conn = DBConnect.getConnection();
 			PreparedStatement st = conn.prepareStatement(sqlAppaltiAzienda);
@@ -29,6 +30,7 @@ public class AppaltoDAO {
 			}
 			st.close();
 			conn.close();
+			az.setAppalti(appalti);
 			return appalti;
 		}catch (SQLException e) {
 			e.printStackTrace();

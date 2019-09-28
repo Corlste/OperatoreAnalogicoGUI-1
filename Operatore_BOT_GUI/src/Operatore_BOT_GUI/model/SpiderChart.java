@@ -334,7 +334,7 @@ drawRadarGrid(g2, radarArea,   catCount); //<<<!!! call new method to draw web g
 	        chart.draw(g2, new Rectangle2D.Double(0, 0, 600, 600), null, null);
 	        g2.dispose();
 	        
-	        BufferedImage spiderchart_image = chart.createBufferedImage(400, 400);
+	        BufferedImage spiderchart_image = chart.createBufferedImage(500, 400);
 //	        File outputfile = new File("C:\\Users\\fabio\\Desktop\\prova.png");
 //	        ImageIO.write(spiderchart_image, "png", outputfile);
 	        

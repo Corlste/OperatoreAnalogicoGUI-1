@@ -22,17 +22,46 @@ public class Model {
 	public Model() {
 		super();
 		AziendaDAO dao = new AziendaDAO();
+		BilancioDAO bilancioDAO = new BilancioDAO();
+		ArticoloDAO artDAO = new ArticoloDAO();
+		BrevettoDAO brevDAO = new BrevettoDAO();
+		AppaltoDAO appDAO = new AppaltoDAO();
+		ProdottoServizioDAO servDAO = new ProdottoServizioDAO();
+		ProgettoDAO prgDAO = new ProgettoDAO();
+
 		this.aziende = dao.getTutteLeAziende();
+		
+		for (Azienda az : aziende) {
+			bilancioDAO.getBilanciByAzienda(az);
+		}
+
+		for (Azienda az : aziende) {
+			artDAO.getArticoliAzienda(az);
+		}
+		
+		for (Azienda az : aziende) {
+			brevDAO.getBrevettiAzienda(az);
+		}
+		
+		for (Azienda az : aziende) {
+			appDAO.getAppaltiAzienda(az);
+		}
+		
+		for (Azienda az : aziende) {
+			servDAO.getProdottiServiziAzienda(az);
+		}
+		
+		for (Azienda az : aziende) {
+			prgDAO.getProgettiAzienda(az);
+		}
 	}
 
 	public List<Azienda> ordineAziende(){
 		Map<String,Integer> variabili = new HashMap<String,Integer>();
 		for (Azienda azi : aziende) {
 			variabili.put(azi.getPartitaIVA(), 0);
-		}
+		}		
 		
-		BilancioDAO bilancioDAO = new BilancioDAO();
-		List<Bilancio> bilanci = bilancioDAO.getTuttiIBilanci();
 		List<Azienda> aziendeOrdinate = new LinkedList<Azienda>();
 		for (Azienda a: aziende) {
 			for (Azienda b: aziende) {
@@ -45,26 +74,6 @@ public class Model {
 		return aziendeOrdinate;
 		
 		
-	}
-	
-	public float calculatePatentsIndex (Azienda az) {
-		return az.countBrevetti();
-	}
-	
-	public float calculateWebRepIndex (Azienda az) {
-		return az.countArticoli();
-	}
-	
-	public float calculateBilancioIndex (Azienda az) {
-		return 0;
-	}
-	
-	public float calculateAppaltiIndex (Azienda az) {
-		return 0;
-	}
-	
-	public float calculateProjectsIndex (Azienda az) {
-		return 0;
 	}
 	
 	
@@ -94,10 +103,8 @@ public class Model {
 	private ArrayList<Articolo> getAllArticles (){
 		ArrayList<Articolo> articoli = new ArrayList<Articolo>();
 		
-		ArticoloDAO artDAO = new ArticoloDAO();
-		
 		for (Azienda az : aziende) {
-			articoli.addAll(artDAO.getArticoliAzienda(az));
+			articoli.addAll(az.getArticoli());
 		}
 		
 		return articoli;
@@ -107,10 +114,8 @@ public class Model {
 	private ArrayList<Brevetto> getAllPatents (){
 		ArrayList<Brevetto> brevetti = new ArrayList<Brevetto>();
 		
-		BrevettoDAO brevDAO = new BrevettoDAO();
-		
 		for (Azienda az : aziende) {
-			brevetti.addAll(brevDAO.getBrevettiAzienda(az));
+			brevetti.addAll(az.getBrevetti());
 		}
 		
 		return brevetti;
@@ -177,53 +182,39 @@ public class Model {
 	}
 	
 	public Bilancio getBilancioAziendaAnno(Azienda azienda, int anno) {
-		BilancioDAO bilancioDAO = new BilancioDAO();
-		Bilancio bilancio = bilancioDAO.getBilancioAziendaAnno(azienda, anno);
-		return bilancio;
+		return azienda.getBilancioOfYear(anno);
 	}
-	
-	public Bilancio getRicaviAziendaAnnoProva(Azienda azienda, int anno) {
-		BilancioDAO bilancioDAO = new BilancioDAO();
-		Bilancio bilancio = bilancioDAO.getRicaviAziendaAnno(azienda, anno);
-		return bilancio;
-	}
+//	
+//	public Bilancio getRicaviAziendaAnnoProva(Azienda azienda, int anno) {
+//		BilancioDAO bilancioDAO = new BilancioDAO();
+//		Bilancio bilancio = bilancioDAO.getRicaviAziendaAnno(azienda, anno);
+//		return bilancio;
+//	}
 	
 	public List<Appalto> getAppaltiAzienda(Azienda azienda) {
-		AppaltoDAO appaltoDAO = new AppaltoDAO();
-		List<Appalto> appalti = appaltoDAO.getAppaltiAzienda(azienda);
-		return appalti;
+		return azienda.getAppalti();
 	}
 	
 	public List<Progetto> getProgettiAzienda(Azienda azienda){
-		ProgettoDAO progettoDAO = new ProgettoDAO();
-		List<Progetto> progetti = progettoDAO.getProgettiAzienda(azienda);
-		return progetti;
+		return azienda.getProgetti();
 	}
 	
 	public List<Articolo> getArticoliAzienda(Azienda azienda){
-		ArticoloDAO articoloDAO = new ArticoloDAO();
-		List<Articolo> articoli = articoloDAO.getArticoliAzienda(azienda);
-		return articoli;
+		return azienda.getArticoli();
 		
 	}
 	
 	public List<News> getNewsAzienda (Azienda azienda){
-		NewsDAO newsDAO = new NewsDAO();
-		List<News> listNews = newsDAO.getNewsAzienda(azienda);
-		return listNews;
+		return azienda.getNews();
 	}
 	
 	
 	public List<ProdottoServizio> getProdottiServizi (Azienda azienda){
-		ProdottoServizioDAO prodservDAO = new ProdottoServizioDAO();
-		List<ProdottoServizio> prodServ = prodservDAO.getProdottiServiziAzienda(azienda);
-		return prodServ;
+		return azienda.getServizi();
 	}
 	
 	public List<Brevetto> getBrevettiAzienda (Azienda azienda){
-		BrevettoDAO brevettoDAO = new BrevettoDAO();
-		List<Brevetto> brevetti = brevettoDAO.getBrevettiAzienda(azienda);
-		return brevetti;
+		return azienda.getBrevetti();
 	}
 	
 	

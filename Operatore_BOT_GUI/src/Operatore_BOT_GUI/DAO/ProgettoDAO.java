@@ -4,6 +4,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -15,7 +16,7 @@ public class ProgettoDAO {
 		
 		String partitaIVA = az.getPartitaIVA();
 		final String sqlProgettiAzienda = "SELECT * FROM progetti WHERE p_iva=? ;";
-		List<Progetto> progetti = new LinkedList<Progetto>();
+		ArrayList<Progetto> progetti = new ArrayList<Progetto>();
 		try {
 			Connection conn = DBConnect.getConnection();
 			PreparedStatement st = conn.prepareStatement(sqlProgettiAzienda);
@@ -28,6 +29,7 @@ public class ProgettoDAO {
 			}
 			st.close();
 			conn.close();
+			az.setProgetti(progetti);
 			return progetti;
 		}catch (SQLException e) {
 			e.printStackTrace();

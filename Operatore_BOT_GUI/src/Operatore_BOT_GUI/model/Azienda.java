@@ -7,10 +7,16 @@ public class Azienda {
 		private String partitaIVA;
 		private String nomeAzienda;
 		private String ragioneSociale;
-		private int webRepIndex = 0;
 		
 		private ArrayList<Brevetto> brevetti = new ArrayList<Brevetto>();
 		private ArrayList<Articolo> articoli = new ArrayList<Articolo>();
+		private ArrayList<Bilancio> bilanci = new ArrayList<Bilancio>();
+		private ArrayList<Appalto> appalti = new ArrayList<Appalto>();
+		private ArrayList<News> news = new ArrayList<News>();
+		private ArrayList<ProdottoServizio> servizi = new ArrayList<ProdottoServizio>();
+		private ArrayList<Progetto> progetti = new ArrayList<Progetto>();
+
+
 
 		
 		private String indirizzo;
@@ -58,6 +64,76 @@ public class Azienda {
 			this.nomeAzienda = nome;
 			this.ragioneSociale = ragione;
 		}
+		
+		
+		// CALCOLO INDICI //////////////////////////////////////////////
+		public double getBrevettiIndex () {
+			
+			return brevetti.size();
+		}
+		
+		public double getArticoliIndex () {
+			
+			return articoli.size();
+		}
+		
+		public double getBilancioIndex (double fatturato_medio, double ricerca_media) {
+			// calcolato su FATTURATO, ROE, ROS, ROI, R&D, Liquidità
+			Bilancio b2018 = this.getBilancioOfYear(2018);
+			double ROEmin = 0.05, ROEok = 0.07, ROEmax = 0.1;
+			double ROSmin = 0.03, ROSok = 0.06, ROSmax = 0.1;
+			double ROImin = 0.05, ROIok = 0.08, ROImax = 0.12;
+			double LIQmin = 1, LIQok = 1.5, LIQmax = 2;
+			double FATmin = 0.6, FATok = 1, FATmax = 1.4;
+			double RICmin = 0.6, RICok = 1, RICmax = 1.4;
+
+			
+			double ROEscore = indexScore(b2018.getROE(), ROEmin, ROEok, ROEmax);
+			double ROSscore = indexScore(b2018.getROS(), ROSmin, ROSok, ROSmax);
+			double ROIscore = indexScore(b2018.getROI(), ROImin, ROIok, ROImax);
+			double LIQscore = indexScore(b2018.getIndiceLiquidità(), LIQmin, LIQok, LIQmax);
+			
+			double FATscore = indexScore(b2018.getRicavi()/fatturato_medio, FATmin, FATok, FATmax);
+			double RICscore = indexScore(b2018.getInvestimentiReD()/ricerca_media, RICmin, RICok, RICmax);
+			
+			double total_index = (ROEscore + ROSscore + ROIscore + LIQscore + FATscore + RICscore)/18;
+			
+			return total_index;
+		}
+		
+		
+		private double indexScore(double index, double min, double ok, double max) {
+			
+			if (index > max) return 3;
+			if (index > ok) return 2;
+			if (index > min) return 1;
+			
+			return 0;
+		}
+		
+		public double getNewsIndex () {
+			
+			return news.size();
+		}
+		
+		public double getServiziIndex () {
+			
+			return servizi.size();
+		}
+		
+		public double getAppaltiIndex () {
+			
+			return appalti.size();
+		}
+		
+		public double getProgettiIndex () {
+			
+			return progetti.size();
+		}
+		
+		
+		
+		
 
 		public String getPartitaIVA() {
 			return partitaIVA;
@@ -89,24 +165,6 @@ public class Azienda {
 			brevetti.add(b);
 		}
 		
-		public int countBrevetti () {
-			
-			return brevetti.size();
-		}
-		
-		public int countArticoli () {
-			
-			return articoli.size();
-		}
-		
-
-		public int getWebRepIndex() {
-			return webRepIndex;
-		}
-
-		public void setWebRepIndex(int webRepIndex) {
-			this.webRepIndex = webRepIndex;
-		}
 		
 		public String getRagioneSociale() {
 			return ragioneSociale;
@@ -257,8 +315,87 @@ public class Azienda {
 		public String toString() {
 			return "Azienda " + nomeAzienda+" "+ ragioneSociale + ", Partita iva "+ partitaIVA +";";
 		}
-
 		
+		
+		// BILANCI ///////////////////////////////////////////////////////////
+		public ArrayList<Bilancio> getBilanci (){
+			return this.bilanci;
+		}
+
+		public Bilancio getBilancioOfYear (int anno) {
+			Bilancio bil = null;
+			for (Bilancio b : this.bilanci) {
+				if (b.getAnno() == anno) bil = b;
+			}
+			
+			if (bil == null) return new Bilancio ("", 0, "", 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+			
+			return bil;
+		}
+		
+		public void setBilanci (ArrayList<Bilancio> bils) {
+			this.bilanci = bils;
+		}
+		
+		public void insertBilancio (Bilancio bil) {
+			this.bilanci.add(bil);
+		}
+		
+		
+		// APPALTI ///////////////////////////////////////////////////////////
+		public ArrayList<Appalto> getAppalti (){
+			return this.appalti;
+		}
+		
+		public void setAppalti (ArrayList<Appalto> apps) {
+			this.appalti = apps;
+		}
+		
+		public void insertAppalto (Appalto app) {
+			this.appalti.add(app);
+		}
+		
+		
+		// NEWS /////////////////////////////////////////////////////////////		
+		public ArrayList<News> getNews (){
+			return this.news;
+		}
+		
+		public void setNews (ArrayList<News> nws) {
+			this.news = nws;
+		}
+		
+		public void insertNews (News nw) {
+			this.news.add(nw);
+		}
+		
+		
+		// PRODOTTO-SERVIZIO /////////////////////////////////////////////////////////////		
+		public ArrayList<ProdottoServizio> getServizi (){
+			return this.servizi;
+		}
+		
+		public void setServizi (ArrayList<ProdottoServizio> servs) {
+			this.servizi = servs;
+		}
+		
+		public void insertServizio (ProdottoServizio serv) {
+			this.servizi.add(serv);
+		}
+		
+		
+		// PROGETTO /////////////////////////////////////////////////////////////		
+		public ArrayList<Progetto> getProgetti (){
+			return this.progetti;
+		}
+		
+		public void setProgetti (ArrayList<Progetto> prgs) {
+			this.progetti = prgs;
+		}
+		
+		public void insertProgetto (Progetto prg) {
+			this.progetti.add(prg);
+		}
 		
 		
 }

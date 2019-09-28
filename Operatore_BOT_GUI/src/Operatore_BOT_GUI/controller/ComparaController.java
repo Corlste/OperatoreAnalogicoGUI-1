@@ -1103,6 +1103,7 @@ public class ComparaController {
     private ImageView chart2;
     
     Model model;
+
     
     /*
      * Il metodo set setta come devono essere compilati i campi all'apertura della scena "Compara"
@@ -1115,7 +1116,7 @@ public class ComparaController {
     	
     	Bilancio bilancioAz2016 = model.getBilancioAziendaAnno(azienda, 2016);
     	Bilancio bilancioAz2017 = model.getBilancioAziendaAnno(azienda, 2017);
-    	Bilancio bilancioAz2018 = model.getBilancioAziendaAnno(azienda, 2017);
+    	Bilancio bilancioAz2018 = model.getBilancioAziendaAnno(azienda, 2018);
 
     	Bilancio bilancioComp2016 = model.getBilancioAziendaAnno(competitor, 2016);
   	    Bilancio bilancioComp2017 = model.getBilancioAziendaAnno(competitor, 2017);
@@ -1603,12 +1604,12 @@ private void drawChart2 () {
     	String[] labels = {"Fatturato", "Reddito Op.", "Margine Str. Pr.", "R&D", "Risultato Es."};
     	SpiderChart chart = new SpiderChart(labels);
     	float[] values1 = {Float.parseFloat(this.txtfatturato18.getText())/100,
-    				Float.parseFloat(this.txtRE18.getText()),
+    				Float.parseFloat(this.txtRO18.getText()),
     				Float.parseFloat(this.txtMSP18.getText()),
     				Float.parseFloat(this.txtInvestimentiRD18.getText()),
     				Float.parseFloat(this.txtRE18.getText())};
     	float[] values2 = {Float.parseFloat(this.txtfatturato181.getText())/100,
-				Float.parseFloat(this.txtRE181.getText()),
+				Float.parseFloat(this.txtRO181.getText()),
 				Float.parseFloat(this.txtMSP181.getText()),
 				Float.parseFloat(this.txtInvestimentiRD181.getText()),
 				Float.parseFloat(this.txtRE181.getText())};

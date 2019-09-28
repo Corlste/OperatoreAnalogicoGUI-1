@@ -421,6 +421,7 @@ import javafx.stage.Stage;
 
 	    Model model;
 	    
+	    
 	    public void setModel(Model model) {
 	    	this.model = model;
 	    	Azienda aziendaSel = model.getAziendaSelezionata();
@@ -433,6 +434,7 @@ import javafx.stage.Stage;
 	    	Bilancio bilancio2016 = model.getBilancioAziendaAnno(aziendaSel, 2016);
 	    	Bilancio bilancio2017 = model.getBilancioAziendaAnno(aziendaSel, 2017);
 	    	Bilancio bilancio2018 = model.getBilancioAziendaAnno(aziendaSel, 2018);
+
 	    	
 	    	txtfatturato161Az.setText(String.valueOf(bilancio2016.getRicavi()));
 	    	System.out.println(bilancio2016.getRicavi());
