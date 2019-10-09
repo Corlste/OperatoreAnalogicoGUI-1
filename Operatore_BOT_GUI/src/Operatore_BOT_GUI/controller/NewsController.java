@@ -113,12 +113,14 @@ public class NewsController {
     
     Model model;
     News newsSel;
+    Azienda aziendaSel;
     
     public void setModel(Model model) {
     	this.model = model;
-    	Azienda aziendaSel = model.getAziendaSelezionata();
+    	aziendaSel = model.getAziendaSelezionata();
     	lblAziendaCompNws.setText(aziendaSel.toString());
     	List<News> newsList = this.model.getNewsAzienda(aziendaSel);
+    	System.out.println(newsList);
     	cmbNews.getItems().addAll(newsList);
     	cmbNews.getItems().add(0, null);
     	List<Azienda> altreAz = model.getAziendeMenoSelezionata(aziendaSel);
